@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Residentron",
-    "slug": "Residentron",
+    "slug": "residentron",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -34,6 +34,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c60ed383-fb7e-4a56-a589-acae0e73b49f"
+      }
+    },
+    "owner": "cheetah-works"
   }
 }
