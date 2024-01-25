@@ -40,13 +40,7 @@
         "origin": false
       },
       "eas": {
-<<<<<<< HEAD
         "projectId": "c60ed383-fb7e-4a56-a589-acae0e73b49f"
-      }
-    },
-    "owner": "cheetah-works"
-=======
-        "projectId": "a85a4ec3-52c3-42a4-9158-fa4c62823448"
       }
     },
     "runtimeVersion": {
@@ -54,7 +48,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/a85a4ec3-52c3-42a4-9158-fa4c62823448"
-    }
->>>>>>> a97069e63b4ddc48f708e2b7ce91389d7fd1949a
+    },
+    "owner": "cheetah-works"
   }
 }
