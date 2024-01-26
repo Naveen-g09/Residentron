@@ -1,31 +1,16 @@
-import { StyleSheet } from 'react-native';
+import { View, Text } from 'react-native'
+import React from 'react'
 
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
+//TODO: add a notification icon
+//TODO: add 4 rectangle grid buttons which has options of everyday help, appliance repair, home cleaning, and moving 
+//TODO: add a search bar
 
-export default function TabTwoScreen() {
+const category = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+    <View>
+      <Text>category</Text>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+export default category

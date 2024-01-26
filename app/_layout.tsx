@@ -2,6 +2,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
+import React from 'react';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 
@@ -17,6 +18,10 @@ export const unstable_settings = {
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+//TODO: add a login and registraion page which on authentication redirects to index page
+//TODO: add a missing page to handle 404 errors
+//TODO: login and registration page should have a logo, email, password, and login button and type of user- (resident, admin, and security)
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
