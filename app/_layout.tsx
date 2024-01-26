@@ -23,6 +23,7 @@ SplashScreen.preventAutoHideAsync();
 //TODO: add a missing page to handle 404 errors
 //TODO: login and registration page should have a logo, email, password, and login button and type of user- (resident, admin, and security)
 
+
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
