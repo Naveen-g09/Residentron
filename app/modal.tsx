@@ -1,35 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native'
+import React from 'react'
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+//TODO: this is gonna be notification page
+//TODO: it will have notificatification of payment dues, gate updates, guest notification, help, etc
+//TODO: it will also have notification of details of the society, details of the resident, details of the flat, details of the family members, details of the parking, details of the utilities, details of the maintenance, details of the bills, details of the orders, details of the payments, details of the receipts, details of the complaints, details of the suggestions, details of the feedbacks, details of the polls, details of the announcements, details of the notices, details of the chats, details of the events, details of the posts, details of the category, details of the community, details of the account, details of the index
 
-export default function ModalScreen() {
+const modal = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Modal</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/modal.tsx" />
-
-      {/* Use a light status bar on iOS to account for the black space above the modal */}
-      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
+    <View>
+      <Text>modal</Text>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+export default modal
