@@ -9,6 +9,7 @@ import Post from '../Post';
 //TODO: add a notification icon
 //TODO: add a bottomsheet onpress of details tab which shows details of resident
 //TODO: add grids for posts, members, and events, chats, notices, posts, announcements, and polls
+
 const Community = () => {
   return (
     <View style={{ backgroundColor: 'white', height: '100%' }}>
