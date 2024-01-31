@@ -12,11 +12,11 @@ const Stories = () => {
       name: 'Your Story',
       image: require('../storage/images/userProfile.png'),
     },
-    {
-      id: 0,
-      name: 'Animesh',
-      image: require('Animesh.png'),
-    },
+    // {
+    //   id: 0,
+    //   name: 'Animesh',
+    //   image: require('Animesh.png'),
+    // },
     {
       id: 0,
       name: 'Naman',
