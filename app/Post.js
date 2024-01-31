@@ -10,7 +10,7 @@ const Post = () => {
     {
       postTitle: 'Animesh',
       postPersonImage: require('../storage/images/Animesh.png'),
-      postImage: require('../storage/images/post1.png'),
+      postImage: require('../storage/images/Post1.png'),
       likes: 765,
       isLiked: false,
     },
