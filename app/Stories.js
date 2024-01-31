@@ -12,32 +12,32 @@ const Stories = () => {
       name: 'Your Story',
       image: require('../storage/images/userProfile.png'),
     },
-    // {
-    //   id: 0,
-    //   name: 'Animesh',
-    //   image: require('Animesh.png'),
-    // },
+    {
+      id: 0,
+      name: 'Animesh',
+      image: require('../storage/images/Animesh.png'),
+    },
     {
       id: 0,
       name: 'Naman',
-      image: require('Naman.png'),
+      image: require('../storage/images/Naman.png'),
     },
     {
       id: 0,
       name: 'Kaashvi',
-      image: require('Kaashvi.png'),
+      image: require('../storage/images/Kaashvi.png'),
     },
     ,
     {
       id: 0,
       name: 'Kangan',
-      image: require('Kangan.png'),
+      image: require('../storage/images/Kangan.png'),
     },
     ,
     {
       id: 0,
       name: 'Ketan',
-      image: require('Ketan.png'),
+      image: require('../storage/images/Ketan.png'),
     },
   ];
 
