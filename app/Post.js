@@ -24,14 +24,14 @@ const Post = () => {
     {
       postTitle: 'Animesh',
       postPersonImage: require('../storage/images/Animesh.png'),
-      postImage: require('../storage/images/post3.png'),
+      postImage: require('../storage/images/post3.jpg'),
       likes: 734,
       isLiked: false,
     },
     {
       postTitle: 'Animesh',
       postPersonImage: require('../storage/images/Animesh.png'),
-      postImage: require('../storage/images/post4.png'),
+      postImage: require('../storage/images/post4.jpg'),
       likes: 875,
       isLiked: false,
     },
