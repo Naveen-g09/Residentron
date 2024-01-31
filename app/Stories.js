@@ -14,30 +14,30 @@ const Stories = () => {
     },
     {
       id: 0,
-      name: 'Ram_Charan',
-      image: require('../storage/images/profile1.jpg'),
+      name: 'Animesh',
+      image: require('Animesh.png'),
     },
     {
       id: 0,
-      name: 'Tom',
-      image: require('../storage/images/profile2.jpg'),
+      name: 'Naman',
+      image: require('Naman.png'),
     },
     {
       id: 0,
-      name: 'The_Groot',
-      image: require('../storage/images/profile3.jpg'),
-    },
-    ,
-    {
-      id: 0,
-      name: 'loverland',
-      image: require('../storage/images/profile4.jpg'),
+      name: 'Kaashvi',
+      image: require('Kaashvi.png'),
     },
     ,
     {
       id: 0,
-      name: 'chillhouse',
-      image: require('../storage/images/profile5.jpg'),
+      name: 'Kangan',
+      image: require('Kangan.png'),
+    },
+    ,
+    {
+      id: 0,
+      name: 'Ketan',
+      image: require('Ketan.png'),
     },
   ];
 
