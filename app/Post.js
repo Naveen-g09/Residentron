@@ -17,7 +17,7 @@ const Post = () => {
     {
       postTitle: 'Animesh',
       postPersonImage: require('../storage/images/Animesh.png'),
-      postImage: require('../storage/images/post2.png'),
+      postImage: require('../storage/images/post2.webp'),
       likes: 345,
       isLiked: false,
     },
