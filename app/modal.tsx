@@ -8,6 +8,7 @@ import React from 'react'
 const modal = () => {
   return (
     <View>
+      //TODO: add a notification icon
       <Text>modal</Text>
     </View>
   )
