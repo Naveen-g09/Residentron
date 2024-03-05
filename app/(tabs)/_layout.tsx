@@ -19,10 +19,20 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   return (
     <Tabs>
-      <Tabs.Screen name="index" options={{headerShown: false}}/>
-      <Tabs.Screen name="category" options={{headerShown: false}}/>
-      <Tabs.Screen name="community" options={{headerShown: false}}/>
-      <Tabs.Screen name="account" options={{headerShown: false}}/>
+      <Tabs.Screen name="index" 
+      options={{
+        title: "Home",
+        tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
+        headerShown: false}}/>
+      <Tabs.Screen name="category" options={{
+        tabBarIcon: (props) => <TabBarIcon {...props} name="list" />,
+        headerShown: false}}/>
+      <Tabs.Screen name="community" options={{
+        tabBarIcon: (props) => <TabBarIcon {...props} name="users" />,
+        headerShown: false}}/>
+      <Tabs.Screen name="account" options={{
+        tabBarIcon: (props) => <TabBarIcon {...props} name="user" />,
+        headerShown: false}}/>
     </Tabs>
   );
 }
