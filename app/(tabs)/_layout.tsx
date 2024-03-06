@@ -27,6 +27,11 @@ export default function RootLayout() {
         options={{
           title: 'Home',
           tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "powderblue",
+          },
+
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -51,6 +56,7 @@ export default function RootLayout() {
       <Tabs.Screen name="account" options={{
         tabBarIcon: (props) => <TabBarIcon {...props} name="user" />,
         headerShown: false}}/>
+        <Tabs.Screen name="[id]" options={{headerShown: false, href:null}}/>
     </Tabs>
   );
 }
