@@ -8,7 +8,6 @@ export const getAllKeys = (): string[] => {
   return storage.getAllKeys();
 };
 
-
 export const deleteAllKeysData = () => {
   const keys = storage.clearAll();
 };

@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
 
 //TODO: this is gonna be notification page
 //TODO: it will have notificatification of payment dues, gate updates, guest notification, help, etc
@@ -8,10 +8,9 @@ import React from 'react'
 const modal = () => {
   return (
     <View>
-
       <Text>Show notifications here</Text>
     </View>
-  )
-}
+  );
+};
 
 export default modal;

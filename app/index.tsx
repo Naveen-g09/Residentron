@@ -2,7 +2,6 @@
 
 import { Redirect } from "expo-router";
 
-
 import { IS_ONBOARDED_KEY } from "@/utils/costants/chat";
 import { storage } from "@/utils/mmkvHelpers";
 import React from "react";

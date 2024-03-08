@@ -52,26 +52,26 @@ const OnboardingPage: React.FC<PageProps> = ({ page, translateX, index }) => {
       style={{
         width: width,
         height: height,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <View
         style={{
           width: CIRCLE_WIDTH,
           aspectRatio: 1, // For aspect-square
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: "center",
+          justifyContent: "center",
           marginBottom: 100,
         }}
       >
         {/* Circle */}
         <Animated.View
           style={{
-            position: 'relative',
-            width: '100%',
-            paddingBottom: '100%',
-            backgroundColor: 'white',
+            position: "relative",
+            width: "100%",
+            paddingBottom: "100%",
+            backgroundColor: "white",
             borderRadius: 50, // Use a numeric value for borderRadius
           }}
         />
@@ -90,10 +90,24 @@ const OnboardingPage: React.FC<PageProps> = ({ page, translateX, index }) => {
           resizeMode="contain"
         />
       </View>
-      <Text style={{ textAlign: 'center', marginBottom: 15, fontSize: 20, fontWeight: '700' }}>
+      <Text
+        style={{
+          textAlign: "center",
+          marginBottom: 15,
+          fontSize: 20,
+          fontWeight: "700",
+        }}
+      >
         {page.title}
       </Text>
-      <Text style={{ textAlign: 'center', fontSize: 16, color: '#888', marginHorizontal: 2 }}>
+      <Text
+        style={{
+          textAlign: "center",
+          fontSize: 16,
+          color: "#888",
+          marginHorizontal: 2,
+        }}
+      >
         {page.description}
       </Text>
     </View>

@@ -110,10 +110,25 @@ export default function OnboardingScreen() {
       </Animated.ScrollView>
 
       {/* FOOTER */}
-      <View style={{ height: 12, marginBottom: 2, flexDirection: 'row', justifyContent: 'space-between' }}>
+      <View
+        style={{
+          height: 12,
+          marginBottom: 2,
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
         {/* Paginator */}
 
-        <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginRight: 100 }}>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            marginRight: 100,
+          }}
+        >
           {PAGES.map((_, index) => {
             return (
               <PaginationDot
@@ -127,7 +142,14 @@ export default function OnboardingScreen() {
 
         {/* Icon or Button Container */}
 
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginLeft: 84 }}>
+        <View
+          style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: 84,
+          }}
+        >
           <AntDesign
             name="arrowright"
             size={24}
