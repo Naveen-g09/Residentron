@@ -1,7 +1,12 @@
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { Link } from "expo-router";
+import React from "react";
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 
 //TODO: this is homepage of the app
 //TODO: add a notification icon
@@ -12,74 +17,69 @@ import { StyleSheet } from 'react-native';
 const index = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-
-      <Link href={"/(tabs)/visitors"} asChild>
-        <TouchableOpacity style={styles.button} >
+      <Link href="/(tabs)/visitors" asChild>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Visitors Update</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href={"/(tabs)/Events"} asChild>
-        <TouchableOpacity style={styles.button} >
+      <Link href="/(tabs)/Events" asChild>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Events</Text>
         </TouchableOpacity>
       </Link>
 
-
-      <Link href={"/(tabs)/News"} asChild>
-        <TouchableOpacity style={styles.button} >
+      <Link href="/(tabs)/News" asChild>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href={"/(tabs)/Payments"} asChild>
-        <TouchableOpacity style={styles.button} >
+      <Link href="/(tabs)/Payments" asChild>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Payment Dues</Text>
         </TouchableOpacity>
       </Link>
-
-
     </ScrollView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'powderblue',
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "powderblue",
   },
   button: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     paddingHorizontal: 20,
     paddingVertical: 10,
     marginVertical: 10,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 5,
-    width: '80%',
-    height: '10%',
-    shadowColor: '#000', // Shadow color
+    width: "80%",
+    height: "10%",
+    shadowColor: "#000", // Shadow color
     shadowOffset: {
       width: 0,
       height: 2, // Shadow offset
     },
     shadowOpacity: 0.25, // Shadow opacity
     shadowRadius: 3.84, // Shadow radius
-    elevation: 5
+    elevation: 5,
   },
   image: {
     marginRight: 10,
   },
   buttonText: {
-    color: '#000',
+    color: "#000",
     fontSize: 18,
     marginLeft: 10,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
 });
 
-
-export default index
+export default index;
