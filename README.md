@@ -1,7 +1,6 @@
 **This is an application for Society Housing managment which is created for the purpose of MCA collaborative project.**
-`Built with Expo-react-Native`
-`This will have features such as:`
-
+```Built with Expo-react-Native```
+```This will have features such as:```
 1. Community Page
 2. Call for services and book amenties
 3. manage services in the society
@@ -12,16 +11,16 @@
 8. keep a proper track of records
    and much more features to be added
 
-`Why Residentron?`
-
+```Why Residentron?```
 - We are focusing on being open source and using open source tech stack, which will reduce the cost for customers to pay minimal prices and experiece a seamless connected world while being at home
-- `Tech Stack includes (not finalised)`
+- ``` Tech Stack includes (not finalised) ```
 - Expo
 - Supabase
 - SQLite
 
-`USP?:`
+```  USP?:  ```
 We are trying to develop it based on age for user (ex: better color modes, font sizes, notification customization, automation, restriction for children), basically something for everyone
+  
 
 figma link:
 https://www.figma.com/file/CUdRvs42DT7ZTRutq617pM/Wireframe-1?type=design&node-id=1-2&mode=design&t=TPgUYMvRyLzLWx31-0

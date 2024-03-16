@@ -1,15 +1,8 @@
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Button } from 'react-native'
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
-import React, { useRef } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-  Button,
-} from "react-native";
+import React, { useRef } from 'react'
 
-import AccountSheet from "../../components/bottomSheet";
+import AccountSheet from '../../components/bottomSheet';
 
 //TODO: add a notification icon
 //TODO: add a profile icon
@@ -52,47 +45,50 @@ const account = () => {
       <Button title="Dismiss" onPress={() => dismiss()} />
 
       <AccountSheet ref={bottomSheetRef} />
+
     </ScrollView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingVertical: 20,
-    backgroundColor: "powderblue",
+    backgroundColor: 'powderblue',
+
+
   },
   button: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 10,
     marginVertical: 10,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 5,
-    width: "80%",
-    height: "10%",
-    shadowColor: "#000", // Shadow color
+    width: '80%',
+    height: '10%',
+    shadowColor: '#000', // Shadow color
     shadowOffset: {
       width: 0,
       height: 2, // Shadow offset
     },
     shadowOpacity: 0.25, // Shadow opacity
     shadowRadius: 3.84, // Shadow radius
-    elevation: 5,
+    elevation: 5
   },
   image: {
     marginRight: 10,
   },
   buttonText: {
-    color: "#000",
+    color: '#000',
     fontSize: 18,
     marginLeft: 10,
-    fontWeight: "bold",
+    fontWeight: 'bold'
   },
 });
 
-export default account;
+export default account

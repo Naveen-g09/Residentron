@@ -1,6 +1,6 @@
-import { useLocalSearchParams, Stack } from "expo-router";
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { useLocalSearchParams, Stack } from 'expo-router';
 
 const NewPage = () => {
   const { id } = useLocalSearchParams();
@@ -16,15 +16,15 @@ const NewPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF", // Add your desired background color
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF', // Add your desired background color
   },
   text: {
     fontSize: 20,
-    textAlign: "center",
+    textAlign: 'center',
     margin: 10,
-    color: "#333", // Add your desired text color
+    color: '#333', // Add your desired text color
   },
 });
 
