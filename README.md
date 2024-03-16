@@ -25,3 +25,6 @@ We are trying to develop it based on age for user (ex: better color modes, font 
 
 figma link:
 https://www.figma.com/file/CUdRvs42DT7ZTRutq617pM/Wireframe-1?type=design&node-id=1-2&mode=design&t=TPgUYMvRyLzLWx31-0
+
+
+something else?
