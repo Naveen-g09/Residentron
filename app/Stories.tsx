@@ -49,20 +49,14 @@ const Stories = () => {
       {storyInfo.map((data, index) => {
         return (
           <TouchableOpacity
-            key={index}
-            onPress={() =>
-              navigation.push('Status', {
-                name: data.name,
-                image: data.image,
-              })
-            }>
+            key={index}>
             <View
               style={{
                 flexDirection: 'column',
                 paddingHorizontal: 8,
                 position: 'relative',
               }}>
-              {data.id == 1 ? (
+              {data?.id == 1 ? (
                 <View
                   style={{
                     position: 'absolute',
@@ -93,7 +87,7 @@ const Stories = () => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={data.image}
+                  source={data?.image ?? require('../path/to/default/image.png')}
                   style={{
                     resizeMode: 'cover',
                     width: '92%',
@@ -107,9 +101,9 @@ const Stories = () => {
                 style={{
                   textAlign: 'center',
                   fontSize: 10,
-                  opacity: data.id == 0 ? 1 : 0.5,
+                  opacity: data?.id === 0 ? 1 : 0.5,
                 }}>
-                {data.name}
+                {data?.name}
               </Text>
             </View>
           </TouchableOpacity>
