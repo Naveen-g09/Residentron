@@ -57,7 +57,7 @@ const Stories = () => {
                 position: "relative",
               }}
             >
-              {data?.id == 1 ? (
+              {data?.id === 1 ? (
                 <View
                   style={{
                     position: "absolute",
@@ -104,7 +104,7 @@ const Stories = () => {
                 style={{
                   textAlign: "center",
                   fontSize: 10,
-                  opacity: data?.id == 0 ? 1 : 0.5,
+                  opacity: data?.id === 0 ? 1 : 0.5,
                 }}
               >
                 {data?.name}
