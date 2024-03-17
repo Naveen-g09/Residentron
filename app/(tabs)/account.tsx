@@ -1,8 +1,10 @@
+
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Button } from 'react-native'
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useRef } from 'react'
 
 import AccountSheet from '../../components/bottomSheet';
+
 
 //TODO: add a notification icon
 //TODO: add a profile icon
@@ -92,3 +94,4 @@ const styles = StyleSheet.create({
 });
 
 export default account
+
