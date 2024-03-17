@@ -1,7 +1,8 @@
+
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Tabs } from "expo-router";
+import { Link, Tabs } from "expo-router";
 import React from "react";
-import { useColorScheme } from "react-native";
+import { Pressable, useColorScheme } from "react-native";
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -19,10 +20,43 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   return (
     <Tabs>
-      <Tabs.Screen name="index" options={{headerShown: false}}/>
-      <Tabs.Screen name="category" options={{headerShown: false}}/>
-      <Tabs.Screen name="community" options={{headerShown: false}}/>
-      <Tabs.Screen name="account" options={{headerShown: false}}/>
+
+
+<Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "powderblue",
+          },
+
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="bell-o"
+                    size={25}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen name="category" options={{
+        tabBarIcon: (props) => <TabBarIcon {...props} name="list" />,
+        headerShown: false}}/>
+      <Tabs.Screen name="community" options={{
+        tabBarIcon: (props) => <TabBarIcon {...props} name="users" />,
+        headerShown: false}}/>
+      <Tabs.Screen name="account" options={{
+        tabBarIcon: (props) => <TabBarIcon {...props} name="user" />,
+        headerShown: false}}/>
+        <Tabs.Screen name="[id]" options={{headerShown: false, href:null}}/>
     </Tabs>
   );
 }

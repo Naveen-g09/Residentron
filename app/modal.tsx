@@ -8,7 +8,8 @@ import React from 'react'
 const modal = () => {
   return (
     <View>
-      <Text>modal</Text>
+
+      <Text>Show notifications here</Text>
     </View>
   )
 }
