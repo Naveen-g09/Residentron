@@ -51,12 +51,7 @@ const Stories = () => {
         return (
           <TouchableOpacity
             key={index}
-            onPress={() =>
-              navigation.push("Status", {
-                name: data.name,
-                image: data.image,
-              })
-            }
+  
           >
             <View
               style={{
@@ -65,7 +60,7 @@ const Stories = () => {
                 position: "relative",
               }}
             >
-              {data.id == 1 ? (
+              {data?.id == 1 ? (
                 <View
                   style={{
                     position: "absolute",
@@ -98,7 +93,7 @@ const Stories = () => {
                 }}
               >
                 <Image
-                  source={data.image}
+                  source={data?.image}
                   style={{
                     resizeMode: "cover",
                     width: "92%",
@@ -112,10 +107,10 @@ const Stories = () => {
                 style={{
                   textAlign: "center",
                   fontSize: 10,
-                  opacity: data.id == 0 ? 1 : 0.5,
+                  opacity: data?.id == 0 ? 1 : 0.5,
                 }}
               >
-                {data.name}
+                {data?.name}
               </Text>
             </View>
           </TouchableOpacity>
