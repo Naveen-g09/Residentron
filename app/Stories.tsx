@@ -49,10 +49,7 @@ const Stories = () => {
     >
       {storyInfo.map((data, index) => {
         return (
-          <TouchableOpacity
-            key={index}
-  
-          >
+          <TouchableOpacity key={index}>
             <View
               style={{
                 flexDirection: "column",

@@ -10,8 +10,17 @@ const AccountSheet = forwardRef<Ref>((props, ref) => {
   return (
     <BottomSheetModal ref={ref} index={0} snapPoints={snapPoints}>
       <View>
-        <View className="flex items-center">
-          <Text className="text-2xl font-semibold p-20 justify-center align-center">
+        <View
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        >
+          <Text
+            style={{
+              fontSize: 24,
+              fontWeight: "bold",
+              padding: 20,
+              textAlign: "center",
+            }}
+          >
             Some data
           </Text>
         </View>
