@@ -31,7 +31,11 @@
     },
     "plugins": ["expo-router"],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "compilerOptions": {
+      "baseUrl": "./"
     },
     "extra": {
       "router": {
