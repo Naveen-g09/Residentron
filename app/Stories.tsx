@@ -87,7 +87,7 @@ const Stories = () => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={data?.image ?? require('../path/to/default/image.png')}
+                  source={data?.image ?? require('../storage/images/post3.jpg')}
                   style={{
                     resizeMode: 'cover',
                     width: '92%',
