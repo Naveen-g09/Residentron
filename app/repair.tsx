@@ -1,14 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Stack } from 'expo-router'
+import { Stack } from "expo-router";
+import React from "react";
+import { View, Text } from "react-native";
 
 const AppliancesRepair = () => {
   return (
     <View>
-      <Stack.Screen options={{ title: 'Appliances Repair' }} />
+      <Stack.Screen options={{ title: "Appliances Repair" }} />
       <Text>Appliances Repair Page</Text>
     </View>
-  )
-}
+  );
+};
 
-export default AppliancesRepair
+export default AppliancesRepair;

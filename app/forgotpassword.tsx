@@ -1,23 +1,29 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 
 const ForgotPasswordScreen: React.FC = () => {
-  const [phoneNumber, setPhoneNumber] = React.useState('');
-  const [otp, setOtp] = React.useState('');
-  const [newPassword, setNewPassword] = React.useState('');
-  const [confirmNewPassword, setConfirmNewPassword] = React.useState('');
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [otp, setOtp] = React.useState("");
+  const [newPassword, setNewPassword] = React.useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = React.useState("");
 
   const handleResetPassword = () => {
     if (newPassword !== confirmNewPassword) {
       // Passwords don't match
-      console.log('Passwords do not match');
+      console.log("Passwords do not match");
       return;
     }
 
     // Add your reset password logic here
-    console.log('Phone Number:', phoneNumber);
-    console.log('OTP:', otp);
-    console.log('New Password:', newPassword);
+    console.log("Phone Number:", phoneNumber);
+    console.log("OTP:", otp);
+    console.log("New Password:", newPassword);
   };
 
   return (
@@ -61,37 +67,37 @@ const ForgotPasswordScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingHorizontal: 20,
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   input: {
-    width: '100%',
+    width: "100%",
     height: 40,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 10,
   },
   button: {
-    width: '100%',
+    width: "100%",
     height: 40,
-    backgroundColor: 'blue',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "blue",
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     marginBottom: 10,
   },
   buttonText: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
 
