@@ -1,7 +1,7 @@
 on:
   pull_request:
     types: [opened, synchronize]
-  jobs:
+jobs:
   preview:
     runs-on: ubuntu-latest
     permissions:
