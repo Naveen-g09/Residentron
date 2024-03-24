@@ -1,10 +1,10 @@
 import "react-native-url-polyfill/auto";
 import { Session } from "@supabase/supabase-js";
+import { Redirect, Stack } from "expo-router";
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
 
-import Account from "../components/Account";
-import Auth from "../components/Auth";
+import Auth from "./Auth/Auth";
 import { supabase } from "../utils/supabase";
 
 export default function App() {
@@ -22,8 +22,10 @@ export default function App() {
 
   return (
     <View>
+      <Stack.Screen options={{ headerShown: false }} />
       {session && session.user ? (
-        <Account key={session.user.id} session={session} />
+        // <Account key={session.user.id} session={session} />
+        <Redirect href="/(tabs)/" />
       ) : (
         <Auth />
       )}
