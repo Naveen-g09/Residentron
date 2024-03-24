@@ -54,16 +54,17 @@ function RootLayoutNav() {
 
   return (
     <BottomSheetModalProvider>
-    <ThemeProvider
-          value={colorScheme === "light" ? DefaultTheme : DefaultTheme}
-        >
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{
-          title: 'Notifications',
-          presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
-  </BottomSheetModalProvider>
+      <ThemeProvider
+        value={colorScheme === "light" ? DefaultTheme : DefaultTheme}
+      >
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="modal" options={{
+            title: 'Notifications',
+            presentation: 'modal'
+          }} />
+        </Stack>
+      </ThemeProvider>
+    </BottomSheetModalProvider>
   );
 }
