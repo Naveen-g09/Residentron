@@ -13,5 +13,5 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "app/PushNotifications.tsx"
-  ]
+, "metro.config.ts"  ]
 }
