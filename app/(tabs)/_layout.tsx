@@ -1,4 +1,3 @@
-
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import React from "react";
@@ -20,12 +19,10 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   return (
     <Tabs>
-
-
-<Tabs.Screen
+      <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: "Home",
           tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
           headerTitleAlign: "center",
           headerStyle: {
@@ -47,16 +44,28 @@ export default function RootLayout() {
           ),
         }}
       />
-      <Tabs.Screen name="category" options={{
-        tabBarIcon: (props) => <TabBarIcon {...props} name="list" />,
-        headerShown: false}}/>
-      <Tabs.Screen name="community" options={{
-        tabBarIcon: (props) => <TabBarIcon {...props} name="users" />,
-        headerShown: false}}/>
-      <Tabs.Screen name="account" options={{
-        tabBarIcon: (props) => <TabBarIcon {...props} name="user" />,
-        headerShown: false}}/>
-        <Tabs.Screen name="[id]" options={{headerShown: false, href:null}}/>
+      <Tabs.Screen
+        name="category"
+        options={{
+          tabBarIcon: (props) => <TabBarIcon {...props} name="list" />,
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="community"
+        options={{
+          tabBarIcon: (props) => <TabBarIcon {...props} name="users" />,
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="account"
+        options={{
+          tabBarIcon: (props) => <TabBarIcon {...props} name="user" />,
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen name="[id]" options={{ headerShown: false, href: null }} />
     </Tabs>
   );
 }
