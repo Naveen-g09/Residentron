@@ -1,4 +1,3 @@
-
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useRef } from "react";
 import {
@@ -10,7 +9,6 @@ import {
 } from "react-native";
 
 import AccountSheet from "../../components/bottomSheet";
-
 
 //TODO: add a notification icon
 //TODO: add a profile icon
