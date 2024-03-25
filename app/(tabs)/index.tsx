@@ -10,7 +10,7 @@ import { storage } from "@/utils/mmkvHelpers";
 //TODO: options of payment dues, gate updates, guest notification, help, etc
 //TODO: in notification component it will push notifications of payment dues, gate updates, guest notification, help, etc
 
-const Index = () => {
+export const Index = () => {
   useEffect(() => {
     // storage.clearAll();
     const keys = storage.getAllKeys();
@@ -85,5 +85,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
-export default index;
