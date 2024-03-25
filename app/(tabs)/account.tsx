@@ -1,4 +1,5 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
+import { Redirect } from "expo-router";
 import React, { useRef } from "react";
 import {
   Text,
@@ -7,9 +8,9 @@ import {
   StyleSheet,
   Button,
 } from "react-native";
-import { Link, Redirect } from 'expo-router';
 
 import AccountSheet from "../../components/bottomSheet";
+
 import { supabase } from "@/utils/supabase";
 
 //TODO: add a notification icon
@@ -26,7 +27,7 @@ const Account = () => {
 
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
-    if (error) console.log('Error logging out:', error.message);
+    if (error) console.log("Error logging out:", error.message);
     else <Redirect href="/" />;
   };
 

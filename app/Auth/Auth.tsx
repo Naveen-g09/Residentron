@@ -1,9 +1,9 @@
+import { Redirect } from "expo-router";
 import React, { useState } from "react";
 import { Alert, StyleSheet, View, AppState } from "react-native";
 import { Button, Input } from "react-native-elements";
 
 import { supabase } from "../../utils/supabase";
-import { Redirect } from "expo-router";
 
 // Tells Supabase Auth to continuously refresh the session automatically if
 // the app is in the foreground. When this is added, you will continue to receive
@@ -28,12 +28,12 @@ export default function Auth() {
       email,
       password,
     });
-  
+
     if (error) Alert.alert(error.message);
     else <Redirect href="/(tabs)/" />; // Add this line
     setLoading(false);
   }
-  
+
   async function signUpWithEmail() {
     setLoading(true);
     const {
@@ -43,9 +43,10 @@ export default function Auth() {
       email,
       password,
     });
-  
+
     if (error) Alert.alert(error.message);
-    else if (!session) Alert.alert("Please check your inbox for email verification!");
+    else if (!session)
+      Alert.alert("Please check your inbox for email verification!");
     else <Redirect href="/(tabs)/" />; // Add this line
     setLoading(false);
   }
