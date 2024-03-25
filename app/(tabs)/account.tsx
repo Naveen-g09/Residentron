@@ -7,8 +7,10 @@ import {
   StyleSheet,
   Button,
 } from "react-native";
+import { Link, Redirect } from 'expo-router';
 
 import AccountSheet from "../../components/bottomSheet";
+import { supabase } from "@/utils/supabase";
 
 //TODO: add a notification icon
 //TODO: add a profile icon
@@ -22,12 +24,17 @@ const Account = () => {
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
 
+  const handleSignOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) console.log('Error logging out:', error.message);
+    else <Redirect href="/" />;
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Personal Details</Text>
       </TouchableOpacity>
-
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Transactions</Text>
       </TouchableOpacity>
@@ -44,9 +51,9 @@ const Account = () => {
         <Text style={styles.buttonText}>Calendar</Text>
       </TouchableOpacity>
 
-      {/*        <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
-        <Text style={styles.buttonText}>  Edit Access</Text>
-      </TouchableOpacity> */}
+      <TouchableOpacity style={styles.button} onPress={handleSignOut}>
+        <Text style={styles.buttonText}>Logout</Text>
+      </TouchableOpacity>
 
       <Button title="Dismiss" onPress={() => dismiss()} />
 
