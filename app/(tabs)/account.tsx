@@ -1,9 +1,7 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useEffect, useState, useRef } from "react";
 import {
-  SafeAreaView,
   Text,
-  View,
   TouchableOpacity,
   StyleSheet,
   Alert,
@@ -11,9 +9,9 @@ import {
   Button,
 } from "react-native";
 
-import { supabase } from "@/app/lib/supabase-client";
-
 import AccountSheet from "../../components/bottomSheet";
+
+import { supabase } from "@/app/lib/supabase-client";
 
 //TODO: add a notification icon
 //TODO: add a profile icon
