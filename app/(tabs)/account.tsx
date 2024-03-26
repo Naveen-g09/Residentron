@@ -1,12 +1,17 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
+  SafeAreaView,
   Text,
+  View,
   TouchableOpacity,
-  ScrollView,
   StyleSheet,
+  Alert,
+  ScrollView,
   Button,
 } from "react-native";
+
+import { supabase } from "@/app/lib/supabase-client";
 
 import AccountSheet from "../../components/bottomSheet";
 
@@ -22,11 +27,25 @@ const Account = () => {
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
 
-  // const handleSignOut = async () => {
-  //   const { error } = await supabase.auth.signOut();
-  //   if (error) console.log("Error logging out:", error.message);
-  //   else <Redirect href="/" />;
-  // };
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    supabase.auth
+      .getUser()
+      .then(({ data: { user } }: { data: { user: any } }) => {
+        if (user) {
+          setUser(user);
+        } else {
+          Alert.alert("Error Accessing User");
+        }
+      });
+  }, []);
+
+  const doLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      Alert.alert("Error Signing Out User", error.message);
+    }
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -48,10 +67,9 @@ const Account = () => {
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Calendar</Text>
       </TouchableOpacity>
-
-      {/* <TouchableOpacity style={styles.button} onPress={handleSignOut}>
-        <Text style={styles.buttonText}>Logout</Text>
-      </TouchableOpacity> */}
+      <TouchableOpacity onPress={doLogout} style={styles.button}>
+        <Text style={styles.buttonText}>LOGOUT</Text>
+      </TouchableOpacity>
 
       <Button title="Dismiss" onPress={() => dismiss()} />
 
