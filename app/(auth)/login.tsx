@@ -77,26 +77,30 @@ export default function AuthPage() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
-    padding: 12,
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "powderblue",
+    paddingHorizontal: 20,
   },
   verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
+    paddingTop: 8,
+    paddingBottom: 8,
     alignSelf: "stretch",
   },
   mt20: {
     marginTop: 20,
   },
   buttonContainer: {
-    backgroundColor: "#000968",
+    backgroundColor: "#0052cc",
     borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
     margin: 8,
+    elevation: 4, // Add elevation for a raised effect
   },
   buttonText: {
     fontSize: 18,
@@ -106,11 +110,13 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   textInput: {
-    borderColor: "#000968",
-    borderRadius: 4,
-    borderStyle: "solid",
+    backgroundColor: "#f0f0f0", // Light background color for input field
+    borderColor: "#ccc",
+    borderRadius: 8,
     borderWidth: 1,
-    padding: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
     margin: 8,
+    width: '100%',
   },
 });
