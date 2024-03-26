@@ -1,34 +1,45 @@
-import "react-native-url-polyfill/auto";
-import { Session } from "@supabase/supabase-js";
-import { Redirect, Stack } from "expo-router";
-import React, { useState, useEffect } from "react";
-import { View } from "react-native";
+import { Redirect, router } from "expo-router";
+import React, { useEffect, useState } from "react";
 
-import Auth from "./Auth/Auth";
-import { supabase } from "../utils/supabase";
+import { supabase } from "./lib/supabase-client";
 
-export default function App() {
-  const [session, setSession] = useState<Session | null>(null);
+import { IS_ONBOARDED_KEY } from "@/utils/costants/chat";
+import { storage } from "@/utils/mmkvHelpers";
+
+export default function Page() {
+  const [session, setSession] = useState(null);
+  const isOnboarded = storage.getBoolean(IS_ONBOARDED_KEY);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }: { data: { session: any } }) => {
+        setSession(session);
+        if (session) {
+          router.replace("/(tabs)/");
+        } else {
+          console.log("no user");
+        }
+      });
 
-    supabase.auth.onAuthStateChange((_event, session) => {
+    supabase.auth.onAuthStateChange((event: any, session: any) => {
       setSession(session);
+      if (session) {
+        router.replace("/(tabs)/");
+      } else {
+        console.log("no user");
+        router.replace("/(auth)/login");
+      }
     });
   }, []);
 
-  return (
-    <View>
-      <Stack.Screen options={{ headerShown: false }} />
-      {session && session.user ? (
-        // <Account key={session.user.id} session={session} />
-        <Redirect href="/(tabs)/" />
-      ) : (
-        <Auth />
-      )}
-    </View>
-  );
+  if (!isOnboarded) {
+    return <Redirect href="/onboarding/" />;
+  }
+
+  if (!session) {
+    return <Redirect href="/(auth)/login" />;
+  }
+
+  return <Redirect href="/(tabs)/" />;
 }

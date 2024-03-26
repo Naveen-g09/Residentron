@@ -1,5 +1,4 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
-import { Redirect } from "expo-router";
 import React, { useRef } from "react";
 import {
   Text,
@@ -10,8 +9,6 @@ import {
 } from "react-native";
 
 import AccountSheet from "../../components/bottomSheet";
-
-import { supabase } from "@/utils/supabase";
 
 //TODO: add a notification icon
 //TODO: add a profile icon
@@ -25,11 +22,11 @@ const Account = () => {
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
 
-  const handleSignOut = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) console.log("Error logging out:", error.message);
-    else <Redirect href="/" />;
-  };
+  // const handleSignOut = async () => {
+  //   const { error } = await supabase.auth.signOut();
+  //   if (error) console.log("Error logging out:", error.message);
+  //   else <Redirect href="/" />;
+  // };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -52,9 +49,9 @@ const Account = () => {
         <Text style={styles.buttonText}>Calendar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={handleSignOut}>
+      {/* <TouchableOpacity style={styles.button} onPress={handleSignOut}>
         <Text style={styles.buttonText}>Logout</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
 
       <Button title="Dismiss" onPress={() => dismiss()} />
 
