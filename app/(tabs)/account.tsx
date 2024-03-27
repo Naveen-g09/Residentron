@@ -1,14 +1,17 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   Text,
   TouchableOpacity,
-  ScrollView,
   StyleSheet,
+  Alert,
+  ScrollView,
   Button,
 } from "react-native";
 
 import AccountSheet from "../../components/bottomSheet";
+
+import { supabase } from "@/app/lib/supabase-client";
 
 //TODO: add a notification icon
 //TODO: add a profile icon
@@ -22,12 +25,31 @@ const Account = () => {
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
 
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    supabase.auth
+      .getUser()
+      .then(({ data: { user } }: { data: { user: any } }) => {
+        if (user) {
+          setUser(user);
+        } else {
+          Alert.alert("Error Accessing User");
+        }
+      });
+  }, []);
+
+  const doLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      Alert.alert("Error Signing Out User", error.message);
+    }
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Personal Details</Text>
       </TouchableOpacity>
-
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Transactions</Text>
       </TouchableOpacity>
@@ -43,10 +65,9 @@ const Account = () => {
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Calendar</Text>
       </TouchableOpacity>
-
-      {/*        <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
-        <Text style={styles.buttonText}>  Edit Access</Text>
-      </TouchableOpacity> */}
+      <TouchableOpacity onPress={doLogout} style={styles.button}>
+        <Text style={styles.buttonText}>LOGOUT</Text>
+      </TouchableOpacity>
 
       <Button title="Dismiss" onPress={() => dismiss()} />
 
