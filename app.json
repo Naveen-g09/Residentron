@@ -31,7 +31,7 @@
     },
     "plugins": ["expo-router"],
     "experiments": {
-      "typedRoutes": false
+      "typedRoutes": true
     },
     "extra": {
       "router": {
