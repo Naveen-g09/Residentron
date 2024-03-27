@@ -34,9 +34,7 @@ export default function AuthPage() {
 
   return (
     <View style={styles.container}>
-      <Stack.Screen
-        options={{ headerShown: true, title: "Residentron" }}
-      />
+      <Stack.Screen options={{ headerShown: true, title: "Residentron" }} />
       <View style={[styles.verticallySpaced, styles.mt20]}>
         <TextInput
           style={styles.textInput}
@@ -117,6 +115,6 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     margin: 8,
-    width: '100%',
+    width: "100%",
   },
 });
