@@ -1,59 +1,66 @@
-import React from "react";
-import { View, Text, StatusBar, ScrollView } from "react-native";
-import Feather from "react-native-vector-icons/Feather";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import Ionic from "react-native-vector-icons/Ionicons";
-
-import Post from "../Post";
-import Stories from "../Stories";
-
-//TODO: add a notification icon
-//TODO: add a bottomsheet onpress of details tab which shows details of resident
-//TODO: add grids for posts, members, and events, chats, notices, posts, announcements, and polls
+import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
+import { Link } from 'expo-router';
 
 const Community = () => {
   return (
-    <View style={{ backgroundColor: "white", height: "100%" }}>
-      <StatusBar backgroundColor="white" barStyle="dark-content" animated />
-      <View
-        style={{
-          justifyContent: "space-between",
-          flexDirection: "row",
-          paddingHorizontal: 15,
-          alignItems: "center",
-        }}
-      >
-        <FontAwesome name="plus-square-o" style={{ fontSize: 24 }} />
-        <Text
-          style={{
-            fontFamily: "Lobster-Regular",
-            fontSize: 25,
-            fontWeight: "500",
-          }}
-        >
-          Instagram
-        </Text>
-        <Feather name="navigation" style={{ fontSize: 24 }} />
-      </View>
-
-      <ScrollView>
-        <Stories />
-        <Post />
-        <View
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            padding: 20,
-          }}
-        >
-          <Ionic
-            name="ios-reload-circle-sharp"
-            style={{ fontSize: 60, opacity: 0.2 }}
-          />
-        </View>
-      </ScrollView>
+    <View style={styles.container}>
+        <Link href="/notice" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Posts</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href="/notice" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Members</Text>
+        </TouchableOpacity>
+      </Link>
+        <Link href="/notice" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Notices</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href="/connect" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Posts</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href="/Announcement" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Announcement</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
   );
-};
+}
 
 export default Community;
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'powderblue',
+    },
+    button: {
+      backgroundColor: 'white',
+      padding: 15,
+      margin: 10,
+      borderRadius: 5,
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
+    },
+    buttonText: {
+      color: '#000',
+      fontSize: 18,
+      fontWeight: 'bold',
+    },
+  });
+  

@@ -35,10 +35,19 @@ const AppliancesRepair = () => {
           open={selectedAppliance !== null}
           value={selectedAppliance !== undefined ? selectedAppliance : null}
           items={[
-            { label: 'Select Appliance', value: null },
+            { label: 'Select Appliance', value: undefined },
             { label: 'Fan', value: 'Fan' },
             { label: 'Light', value: 'Light' },
             { label: 'Motor', value: 'Motor' },
+            { label: 'Refrigerator', value: 'Refrigerator' },
+            { label: 'Washing Machine', value: 'Washing Machine' },
+            { label: 'Air Conditioner', value: 'Air Conditioner' },
+            { label: 'Microwave', value: 'Microwave' },
+            { label: 'Oven', value: 'Oven' },
+            { label: 'Dishwasher', value: 'Dishwasher' },
+            { label: 'Water Heater', value: 'Water Heater' },
+            { label: 'Others', value: 'Others' },
+            
             // Add more appliances as needed
           ]}
           setOpen={() => setSelectedAppliance(undefined)}

@@ -12,7 +12,7 @@ import CalenderSheet from "@/components/calenderBS";
 import AccountSheet from "../../components/bottomSheet";
 import Transaction from "@/components/transactionBottomSheet";
 import Admin from "@/components/adminBottomSheet";
-
+import Utility from "@/components/utility";
 import { supabase } from "@/app/lib/supabase-client";
 import { Link } from "expo-router";
 
@@ -26,6 +26,7 @@ const Account = () => {
   const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
   const transactionBottomSheetRef = useRef<BottomSheetModal>(null);
   const adminBottomSheetRef = useRef<BottomSheetModal>(null);
+  const utilityBottomSheetRef = useRef<BottomSheetModal>(null);
 
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
@@ -33,6 +34,9 @@ const Account = () => {
   const handleTransactionPress = () =>
     transactionBottomSheetRef.current?.present();
   const handleAdminPress = () => adminBottomSheetRef.current?.present();
+  const handleUtilityPress = () => utilityBottomSheetRef.current?.present();
+
+
   const [user, setUser] = useState(null);
   useEffect(() => {
     supabase.auth
@@ -55,15 +59,15 @@ const Account = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      
-        <TouchableOpacity style={styles.button} onPress={handleAdminPress}>
-          <Text style={styles.buttonText}>Personal Details</Text>
-        </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={handleAdminPress}>
+        <Text style={styles.buttonText}>Personal Details</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={handleTransactionPress}>
         <Text style={styles.buttonText}>Transactions</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
+      <TouchableOpacity style={styles.button} onPress={handleUtilityPress}>
         <Text style={styles.buttonText}>Utility</Text>
       </TouchableOpacity>
 
@@ -77,13 +81,11 @@ const Account = () => {
       <TouchableOpacity onPress={doLogout} style={styles.button}>
         <Text style={styles.buttonText}>LOGOUT</Text>
       </TouchableOpacity>
-
-      <Button title="Dismiss" onPress={() => dismiss()} />
-
       <AccountSheet ref={bottomSheetRef} />
       <CalenderSheet ref={calenderBottomSheetRef} />
       <Transaction ref={transactionBottomSheetRef} />
       <Admin ref={adminBottomSheetRef} />
+      <Utility ref={utilityBottomSheetRef} />
     </ScrollView>
   );
 };

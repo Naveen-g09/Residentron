@@ -34,6 +34,18 @@ const index = () => {
           <Text style={styles.buttonText}>Payment Dues</Text>
         </TouchableOpacity>
       </Link>
+      <Text>Gate Updates</Text>
+      <Link href="/news" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>News</Text>
+        </TouchableOpacity>
+      </Link>
+
+      <Link href="/visitor" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Visitors</Text>
+        </TouchableOpacity>
+      </Link>
     </ScrollView>
   );
 };
