@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import DropDownPicker from 'react-native-dropdown-picker';
+import DropDownPicker from "react-native-dropdown-picker";
 
 const AppliancesRepair = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [selectedAppliance, setSelectedAppliance] = useState<string | undefined>(undefined);
+  const [selectedAppliance, setSelectedAppliance] = useState<
+    string | undefined
+  >(undefined);
 
   const handleRequest = () => {
     if (!selectedDate || !selectedAppliance) {
@@ -25,8 +27,13 @@ const AppliancesRepair = () => {
       <Text style={styles.title}>Request Repair</Text>
       <View style={styles.formGroup}>
         <Text style={styles.label}>Select Date:</Text>
-        <TouchableOpacity style={styles.datePicker} onPress={() => console.log("Open Date Picker")}>
-          <Text>{selectedDate ? selectedDate.toDateString() : "Select Date"}</Text>
+        <TouchableOpacity
+          style={styles.datePicker}
+          onPress={() => console.log("Open Date Picker")}
+        >
+          <Text>
+            {selectedDate ? selectedDate.toDateString() : "Select Date"}
+          </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.formGroup}>
@@ -35,19 +42,19 @@ const AppliancesRepair = () => {
           open={selectedAppliance !== null}
           value={selectedAppliance !== undefined ? selectedAppliance : null}
           items={[
-            { label: 'Select Appliance', value: undefined },
-            { label: 'Fan', value: 'Fan' },
-            { label: 'Light', value: 'Light' },
-            { label: 'Motor', value: 'Motor' },
-            { label: 'Refrigerator', value: 'Refrigerator' },
-            { label: 'Washing Machine', value: 'Washing Machine' },
-            { label: 'Air Conditioner', value: 'Air Conditioner' },
-            { label: 'Microwave', value: 'Microwave' },
-            { label: 'Oven', value: 'Oven' },
-            { label: 'Dishwasher', value: 'Dishwasher' },
-            { label: 'Water Heater', value: 'Water Heater' },
-            { label: 'Others', value: 'Others' },
-            
+            { label: "Select Appliance", value: undefined },
+            { label: "Fan", value: "Fan" },
+            { label: "Light", value: "Light" },
+            { label: "Motor", value: "Motor" },
+            { label: "Refrigerator", value: "Refrigerator" },
+            { label: "Washing Machine", value: "Washing Machine" },
+            { label: "Air Conditioner", value: "Air Conditioner" },
+            { label: "Microwave", value: "Microwave" },
+            { label: "Oven", value: "Oven" },
+            { label: "Dishwasher", value: "Dishwasher" },
+            { label: "Water Heater", value: "Water Heater" },
+            { label: "Others", value: "Others" },
+
             // Add more appliances as needed
           ]}
           setOpen={() => setSelectedAppliance(undefined)}

@@ -3,7 +3,9 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const Help = () => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
-  const [selectedFrequency, setSelectedFrequency] = useState<string | null>(null);
+  const [selectedFrequency, setSelectedFrequency] = useState<string | null>(
+    null,
+  );
 
   const handleServiceSelection = (service: string) => {
     if (selectedServices.includes(service)) {
@@ -61,7 +63,8 @@ const Help = () => {
             onPress={() => handleServiceSelection("Baby Sitter")}
             style={[
               styles.serviceButton,
-              selectedServices.includes("Baby Sitter") && styles.selectedService,
+              selectedServices.includes("Baby Sitter") &&
+                styles.selectedService,
             ]}
           >
             <Text style={styles.serviceButtonText}>Baby Sitter</Text>
@@ -79,7 +82,8 @@ const Help = () => {
             onPress={() => handleServiceSelection("Elderly Care")}
             style={[
               styles.serviceButton,
-              selectedServices.includes("Elderly Care") && styles.selectedService,
+              selectedServices.includes("Elderly Care") &&
+                styles.selectedService,
             ]}
           >
             <Text style={styles.serviceButtonText}>Elderly Care</Text>

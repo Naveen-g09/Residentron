@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View, Text } from "react-native";
 
 const Payment = () => {
   return (
@@ -7,7 +7,7 @@ const Payment = () => {
       <Text>There are no payment dues</Text>
       <Text>Upcoming Dues</Text>
     </View>
-  )
-}
+  );
+};
 
-export default Payment
+export default Payment;

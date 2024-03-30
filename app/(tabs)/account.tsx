@@ -6,15 +6,15 @@ import {
   StyleSheet,
   Alert,
   ScrollView,
-  Button,
 } from "react-native";
-import CalenderSheet from "@/components/calenderBS";
+
 import AccountSheet from "../../components/bottomSheet";
-import Transaction from "@/components/transactionBottomSheet";
-import Admin from "@/components/adminBottomSheet";
-import Utility from "@/components/utility";
+
 import { supabase } from "@/app/lib/supabase-client";
-import { Link } from "expo-router";
+import Admin from "@/components/adminBottomSheet";
+import CalenderSheet from "@/components/calenderBS";
+import Transaction from "@/components/transactionBottomSheet";
+import Utility from "@/components/utility";
 
 //TODO: details grids of profile picture, name, email, phone number, address, and edit button
 //TODO: details of flat no, family members, parking, your posts, your events, your polls, your announcements, your notices, your chats, your complaints, your suggestions, your feedbacks, your maintenance, your bills, your payments, your receipts, your orders,
@@ -35,7 +35,6 @@ const Account = () => {
     transactionBottomSheetRef.current?.present();
   const handleAdminPress = () => adminBottomSheetRef.current?.present();
   const handleUtilityPress = () => utilityBottomSheetRef.current?.present();
-
 
   const [user, setUser] = useState(null);
   useEffect(() => {
@@ -59,7 +58,6 @@ const Account = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-
       <TouchableOpacity style={styles.button} onPress={handleAdminPress}>
         <Text style={styles.buttonText}>Personal Details</Text>
       </TouchableOpacity>

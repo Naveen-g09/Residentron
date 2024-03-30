@@ -1,5 +1,5 @@
-import { View, Text, FlatList } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { View, Text, FlatList } from "react-native";
 
 interface EventItem {
   id: string;
@@ -8,8 +8,8 @@ interface EventItem {
 
 const Event = () => {
   const [events, setEvents] = useState<EventItem[]>([
-    { id: '1', name: 'Event 1' },
-    { id: '2', name: 'Event 2' },
+    { id: "1", name: "Event 1" },
+    { id: "2", name: "Event 2" },
     // Add more events here...
   ]);
 
@@ -24,10 +24,10 @@ const Event = () => {
       <FlatList
         data={events}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
       />
     </View>
-  )
-}
+  );
+};
 
-export default Event
+export default Event;

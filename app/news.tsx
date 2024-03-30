@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const News = () => {
   const newsItems = [
@@ -8,7 +8,7 @@ const News = () => {
     "Community meeting at 7PM",
     "Garage sale at House #456",
     "Lost dog found near the park",
-    "Swimming pool will be closed for maintenance"
+    "Swimming pool will be closed for maintenance",
   ];
 
   return (
@@ -19,8 +19,8 @@ const News = () => {
         </View>
       ))}
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   newsBlock: {
-    backgroundColor: '#ddd',
+    backgroundColor: "#ddd",
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
   },
 });
 
-export default News
+export default News;

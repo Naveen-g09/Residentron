@@ -1,6 +1,6 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { forwardRef, useMemo, useState } from "react";
-import { View, Text, Button, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { Calendar } from "react-native-calendars";
 
 export type Ref = BottomSheetModal;
@@ -17,8 +17,8 @@ const CalenderSheet = forwardRef<Ref>((props, ref) => {
   };
   return (
     <BottomSheetModal ref={ref} index={1} snapPoints={snapPoints}>
-       <View style={styles.container}>
-      <Text style={styles.text}>Calendar </Text>
+      <View style={styles.container}>
+        <Text style={styles.text}>Calendar </Text>
         <Calendar
           onDayPress={onDayPress}
           markedDates={{
@@ -30,9 +30,8 @@ const CalenderSheet = forwardRef<Ref>((props, ref) => {
           }}
           style={{ borderWidth: 2, borderColor: "#000", borderRadius: 10 }}
         />
-        </View>
-        <Button title="Dismiss" onPress={() => dismiss()} />
-
+      </View>
+      <Button title="Dismiss" onPress={() => dismiss()} />
     </BottomSheetModal>
   );
 });
