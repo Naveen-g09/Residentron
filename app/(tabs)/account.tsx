@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 20,
-    backgroundColor: "powderblue",
+    // backgroundColor: "powderblue",
   },
   button: {
     flexDirection: "row",

@@ -16,9 +16,9 @@ function TabBarIcon(props: {
 //TODO: add a missing page to handle 404 errors
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   return (
-    <Tabs>
+    <Tabs
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -26,7 +26,7 @@ export default function RootLayout() {
           tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
           headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "powderblue",
+            backgroundColor: "54BCBD",
           },
 
           headerRight: () => (
