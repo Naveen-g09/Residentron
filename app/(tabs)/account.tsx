@@ -8,7 +8,7 @@ import {
   ScrollView,
   Button,
 } from "react-native";
-
+import CalenderSheet from "@/components/calenderBS";
 import AccountSheet from "../../components/bottomSheet";
 
 import { supabase } from "@/app/lib/supabase-client";
@@ -20,9 +20,10 @@ import { supabase } from "@/app/lib/supabase-client";
 
 const Account = () => {
   const bottomSheetRef = useRef<BottomSheetModal>(null);
+  const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
-
+  const handleCalenderPress = () => calenderBottomSheetRef.current?.present();
   const [user, setUser] = useState(null);
   useEffect(() => {
     supabase.auth
@@ -60,7 +61,7 @@ const Account = () => {
         <Text style={styles.buttonText}>Request Help</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
+      <TouchableOpacity style={styles.button} onPress={handleCalenderPress}>
         <Text style={styles.buttonText}>Calendar</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={doLogout} style={styles.button}>
@@ -70,6 +71,7 @@ const Account = () => {
       <Button title="Dismiss" onPress={() => dismiss()} />
 
       <AccountSheet ref={bottomSheetRef} />
+      <CalenderSheet ref={calenderBottomSheetRef} />
     </ScrollView>
   );
 };
