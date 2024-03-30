@@ -11,25 +11,25 @@ import { Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 const index = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Link href="/(tabs)/visitors" asChild>
+      <Link href="/visitor" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Visitors Update</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href="/(tabs)/Events" asChild>
+      <Link href="/event" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Events</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href="/(tabs)/News" asChild>
+      <Link href="/news" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href="/(tabs)/Payments" asChild>
+      <Link href="/payment" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Payment Dues</Text>
         </TouchableOpacity>
