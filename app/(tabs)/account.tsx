@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import CalenderSheet from "@/components/calenderBS";
 import AccountSheet from "../../components/bottomSheet";
+import Transaction from "@/components/transactionBottomSheet";
+import Admin from "@/components/adminBottomSheet";
 
 import { supabase } from "@/app/lib/supabase-client";
 import { Link } from "expo-router";
@@ -22,9 +24,15 @@ import { Link } from "expo-router";
 const Account = () => {
   const bottomSheetRef = useRef<BottomSheetModal>(null);
   const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
+  const transactionBottomSheetRef = useRef<BottomSheetModal>(null);
+  const adminBottomSheetRef = useRef<BottomSheetModal>(null);
+
   const { dismiss } = useBottomSheetModal();
   const handleOpenPress = () => bottomSheetRef.current?.present();
   const handleCalenderPress = () => calenderBottomSheetRef.current?.present();
+  const handleTransactionPress = () =>
+    transactionBottomSheetRef.current?.present();
+  const handleAdminPress = () => adminBottomSheetRef.current?.present();
   const [user, setUser] = useState(null);
   useEffect(() => {
     supabase.auth
@@ -47,12 +55,11 @@ const Account = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Link href="/admin" asChild>
-        <TouchableOpacity style={styles.button}>
+      
+        <TouchableOpacity style={styles.button} onPress={handleAdminPress}>
           <Text style={styles.buttonText}>Personal Details</Text>
         </TouchableOpacity>
-      </Link>
-      <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
+      <TouchableOpacity style={styles.button} onPress={handleTransactionPress}>
         <Text style={styles.buttonText}>Transactions</Text>
       </TouchableOpacity>
 
@@ -75,6 +82,8 @@ const Account = () => {
 
       <AccountSheet ref={bottomSheetRef} />
       <CalenderSheet ref={calenderBottomSheetRef} />
+      <Transaction ref={transactionBottomSheetRef} />
+      <Admin ref={adminBottomSheetRef} />
     </ScrollView>
   );
 };

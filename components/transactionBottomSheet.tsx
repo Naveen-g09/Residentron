@@ -3,13 +3,13 @@ import React, { forwardRef, useMemo } from 'react';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 export type Ref = BottomSheetModal;
 
-const BookAmeneties = forwardRef<Ref>((props, ref) => {
+const Transaction = forwardRef<Ref>((props, ref) => {
 	const snapPoints = useMemo(() => ['50%', '75%'], []);
 
 	return (
 		<BottomSheetModal ref={ref} index={0} snapPoints={snapPoints}>
 			<View style={styles.contentContainer}>
-				<Text style={styles.containerHeadline}>Bottom Modal 😎</Text>
+				<Text style={styles.containerHeadline}>No Transactions Yet</Text>
 			</View>
 		</BottomSheetModal>
 	);
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default BookAmeneties;
+export default Transaction;

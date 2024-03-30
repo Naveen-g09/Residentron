@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { BottomSheetModal, useBottomSheetModal } from '@gorhom/bottom-sheet';
-import BookAmeneties from "@/components/amenetiesBottomSheet";
+import BookAmeneties from "@/components/adminBottomSheet";
 
 const Amenities = () => {
 
