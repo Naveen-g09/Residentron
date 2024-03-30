@@ -12,6 +12,7 @@ import CalenderSheet from "@/components/calenderBS";
 import AccountSheet from "../../components/bottomSheet";
 
 import { supabase } from "@/app/lib/supabase-client";
+import { Link } from "expo-router";
 
 //TODO: details grids of profile picture, name, email, phone number, address, and edit button
 //TODO: details of flat no, family members, parking, your posts, your events, your polls, your announcements, your notices, your chats, your complaints, your suggestions, your feedbacks, your maintenance, your bills, your payments, your receipts, your orders,
@@ -46,9 +47,11 @@ const Account = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
-        <Text style={styles.buttonText}>Personal Details</Text>
-      </TouchableOpacity>
+      <Link href="/admin" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Personal Details</Text>
+        </TouchableOpacity>
+      </Link>
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Transactions</Text>
       </TouchableOpacity>
