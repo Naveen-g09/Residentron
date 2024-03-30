@@ -13,7 +13,7 @@ import Stories from "./Stories";
 
 const Connect = () => {
   return (
-    <View style={{  height: "100%" }}>
+    <View style={{ height: "100%" }}>
       <StatusBar backgroundColor="white" barStyle="dark-content" animated />
       <View
         style={{

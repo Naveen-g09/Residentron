@@ -17,8 +17,7 @@ function TabBarIcon(props: {
 
 export default function RootLayout() {
   return (
-    <Tabs
-    >
+    <Tabs>
       <Tabs.Screen
         name="index"
         options={{
