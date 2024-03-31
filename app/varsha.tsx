@@ -91,16 +91,16 @@ const styles = StyleSheet.create({
     color: "white",
   },
   gridA: {
-    backgroundColor: "red",
+    backgroundColor: "#34A1C0",
   },
   gridB: {
-    backgroundColor: "blue",
+    backgroundColor: "#34A1C0",
   },
   gridC: {
-    backgroundColor: "green",
+    backgroundColor: "#34A1C0",
   },
   gridD: {
-    backgroundColor: "orange",
+    backgroundColor: "#34A1C0",
   },
 });
 
