@@ -14,7 +14,7 @@ import Stories from "./Stories";
 
 const Connect = () => {
   const { hasPermission, requestPermission: requestCameraPermissions } =
-  useCameraPermission();
+    useCameraPermission();
 
   const [isCameraModalVisible, setCameraModalVisible] = useState(false);
   const handleCameraPress = async () => {
@@ -25,7 +25,7 @@ const Connect = () => {
       setCameraModalVisible(true);
     }
   };
-  
+
   return (
     <View style={{ height: "100%" }}>
       <StatusBar backgroundColor="white" barStyle="dark-content" animated />
