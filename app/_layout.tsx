@@ -7,7 +7,13 @@ import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import { useColorScheme } from "@/components/useColorScheme";
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "#e6f2ff", // Set your desired background color here
+  },
+};
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -47,14 +53,10 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <BottomSheetModalProvider>
-        <ThemeProvider
-          value={colorScheme === "light" ? DefaultTheme : DefaultTheme}
-        >
+        <ThemeProvider value={MyTheme}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)" options={{ headerShown: false }} />
@@ -62,6 +64,7 @@ function RootLayoutNav() {
               name="(settings)/index"
               options={{ headerShown: false }}
             />
+            <Stack.Screen name="ameneties" options={{}} />
             <Stack.Screen name="modal" options={{ presentation: "modal" }} />
           </Stack>
         </ThemeProvider>

@@ -11,27 +11,39 @@ import { Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 const index = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Link href="/(tabs)/visitors" asChild>
+      <Link href="/visitor" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Visitors Update</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href="/(tabs)/Events" asChild>
+      <Link href="/event" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Events</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href="/(tabs)/News" asChild>
+      {/* <Link href="/news" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>News</Text>
+        </TouchableOpacity>
+      </Link> */}
+
+      <Link href="/payment" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Payment Dues</Text>
+        </TouchableOpacity>
+      </Link>
+      {/* <Text>Gate Updates</Text> */}
+      <Link href="/news" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
         </TouchableOpacity>
       </Link>
 
-      <Link href="/(tabs)/Payments" asChild>
+      <Link href="/visitor" asChild>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Payment Dues</Text>
+          <Text style={styles.buttonText}>Visitors</Text>
         </TouchableOpacity>
       </Link>
     </ScrollView>
@@ -44,7 +56,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "powderblue",
   },
   button: {
     flexDirection: "row",
@@ -52,7 +63,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     marginVertical: 10,
-    backgroundColor: "white",
+    backgroundColor: "powderblue",
     borderRadius: 5,
     width: "80%",
     height: "10%",

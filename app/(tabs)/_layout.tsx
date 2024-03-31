@@ -1,7 +1,7 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import React from "react";
-import { Pressable, useColorScheme } from "react-native";
+import { Pressable } from "react-native";
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -16,7 +16,6 @@ function TabBarIcon(props: {
 //TODO: add a missing page to handle 404 errors
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   return (
     <Tabs>
       <Tabs.Screen
@@ -26,7 +25,7 @@ export default function RootLayout() {
           tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
           headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "powderblue",
+            backgroundColor: "54BCBD",
           },
 
           headerRight: () => (

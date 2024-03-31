@@ -1,46 +1,36 @@
-import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
-import { Link } from "expo-router";
-import React, { useRef } from "react";
+import { Link, Stack } from "expo-router";
+import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-import CalenderSheet from "@/components/calenderBS";
-
-const Community = () => {
-  const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
-  const handleCalenderPress = () => calenderBottomSheetRef.current?.present();
-
-  const { dismiss } = useBottomSheetModal();
+const Admin = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={handleCalenderPress}>
-        <Text style={styles.buttonText}>Calendar</Text>
-      </TouchableOpacity>
-      <Link href="/Members" asChild>
+      <Stack.Screen options={{ headerTitle: "Admin Page" }} />
+      <Link href="/varsha" asChild>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Members</Text>
+          <Text style={styles.buttonText}>Varsha Apt</Text>
         </TouchableOpacity>
       </Link>
-      <Link href="/notice" asChild>
+      <Link href="/GoodWill" asChild>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Notices</Text>
+          <Text style={styles.buttonText}>Good Will Avenue</Text>
         </TouchableOpacity>
       </Link>
-      <Link href="/connect" asChild>
+      <Link href="/Neelkamal" asChild>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Posts</Text>
+          <Text style={styles.buttonText}>Neelkamal Apt</Text>
         </TouchableOpacity>
       </Link>
-      <Link href="/Announcement" asChild>
+      <Link href="/Neelgiri" asChild>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Announcement</Text>
+          <Text style={styles.buttonText}>Neelgiri Apt</Text>
         </TouchableOpacity>
       </Link>
-      <CalenderSheet ref={calenderBottomSheetRef} />
     </View>
   );
 };
 
-export default Community;
+export default Admin;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

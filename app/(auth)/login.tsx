@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "powderblue",
+    // backgroundColor: "powderblue",
     paddingHorizontal: 20,
   },
   verticallySpaced: {
