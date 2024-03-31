@@ -1,9 +1,9 @@
-import React from "react";
-import { Camera, CameraType } from 'expo-camera';
+import React, { useState } from "react";
 import { View, Text, StatusBar, ScrollView } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Ionic from "react-native-vector-icons/Ionicons";
+import { useCameraPermission } from "react-native-vision-camera";
 
 import Post from "./Post";
 import Stories from "./Stories";
@@ -13,7 +13,18 @@ import Stories from "./Stories";
 //TODO: add grids for posts, members, and events, chats, notices, posts, announcements, and polls
 
 const Connect = () => {
+  const { hasPermission, requestPermission: requestCameraPermissions } =
+  useCameraPermission();
 
+  const [isCameraModalVisible, setCameraModalVisible] = useState(false);
+  const handleCameraPress = async () => {
+    const da = await requestCameraPermissions();
+    console.log("request Camera Permissions", da);
+    if (hasPermission) {
+      console.log("hasPermission", hasPermission);
+      setCameraModalVisible(true);
+    }
+  };
   
   return (
     <View style={{ height: "100%" }}>

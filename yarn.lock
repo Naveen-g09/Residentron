@@ -2053,13 +2053,6 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@koale/useworker@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@koale/useworker/-/useworker-4.0.2.tgz#cb540a2581cd6025307c3ca6685bc60748773e58"
-  integrity sha512-xPIPADtom8/3/4FLNj7MvNcBM/Z2FleH85Fdx2O869eoKW8+PoEgtSVvoxWjCWMA46Sm9A5/R1TyzNGc+yM0wg==
-  dependencies:
-    dequal "^1.0.0"
-
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
@@ -5401,11 +5394,6 @@ deprecated-react-native-prop-types@^5.0.0:
     invariant "^2.2.4"
     prop-types "^15.8.1"
 
-dequal@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/dequal/-/dequal-1.0.1.tgz#dbbf9795ec626e9da8bd68782f4add1d23700d8b"
-  integrity sha512-Fx8jxibzkJX2aJgyfSdLhr9tlRoTnHKrRJuu2XHlAgKioN2j19/Bcbe0d4mFXYZ3+wpE2KVobUVTfDutcD17xQ==
-
 destroy@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
@@ -6197,14 +6185,6 @@ expo-asset@~9.0.2:
     expo-file-system "~16.0.0"
     invariant "^2.2.4"
     md5-file "^3.2.3"
-
-expo-camera@13.2.0:
-  version "13.2.0"
-  resolved "https://registry.yarnpkg.com/expo-camera/-/expo-camera-13.2.0.tgz#a2521c6c5398fbe658ca6d0bd186a2b0529c9a1b"
-  integrity sha512-AwmIhs0h5n6sMBxZQq76yiBiiK731vwUtNdOCza6/dEVxNumnMu62oGaB8KFGfMNh6YrR/aHJSWkV8OInmaLpQ==
-  dependencies:
-    "@koale/useworker" "^4.0.2"
-    invariant "^2.2.4"
 
 expo-constants@~15.4.0, expo-constants@~15.4.3:
   version "15.4.5"
@@ -8932,10 +8912,10 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lottie-react-native@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/lottie-react-native/-/lottie-react-native-6.7.0.tgz#ef783af4224dcb4bc88a96de688e13d41104f511"
-  integrity sha512-doiF/36LaKkzo0XkgUIK8egxALNY6jGjCI4szpRuwop15LTW3DFtIA2L3pusNdaH7oM797aSH5UylIJw2k+Hgw==
+lottie-react-native@6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/lottie-react-native/-/lottie-react-native-6.5.1.tgz#7986078648d1ff274a704ae3bd979a4c3aa235c6"
+  integrity sha512-pjih71P6qX6Ax5ucUBA+YJO7+fnveI581Bd8LmYeARm3spq3AnoGzEkrWaieM8odnK6WI4d5dwEJsxge/QjFPw==
 
 lower-case@^2.0.2:
   version "2.0.2"
