@@ -43,7 +43,7 @@
     "expo-system-ui": "~2.9.3",
     "expo-updates": "~0.24.12",
     "expo-web-browser": "~12.8.2",
-    "lottie-react-native": "6.5.1",
+    "lottie-react-native": "^6.7.0",
     "mime": "^4.0.1",
     "nativewind": "^2.0.11",
     "react": "18.2.0",

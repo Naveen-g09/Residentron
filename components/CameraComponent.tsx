@@ -138,7 +138,7 @@ export default function CameraComponent({
           </TouchableOpacity>
         </View>
       )}
-      {showQR && (
+      {/* {showQR && (
         <View style={styles.fullScreenContainer}>
           <LottieView
             autoPlay
@@ -147,7 +147,7 @@ export default function CameraComponent({
             source={require("./../assets/lottie/qr-scan.json")}
           />
         </View>
-      )}
+      )} */}
       <View style={styles.bottomBar}>
         {photoUri ? (
           <View style={styles.buttonsContainer}>

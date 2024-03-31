@@ -1,8 +1,7 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { useRef } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-
-import BookAmeneties from "@/components/adminBottomSheet";
+import AccountSheet from "@/components/bottomSheet";
 
 const Amenities = () => {
   const bottomSheetRef = useRef<BottomSheetModal>(null);
@@ -39,7 +38,7 @@ const Amenities = () => {
       <TouchableOpacity onPress={handlePresentModalPress} style={styles.button}>
         <Text style={styles.buttonText}>Squash Court</Text>
       </TouchableOpacity>
-      <BookAmeneties ref={bottomSheetRef} />
+      <AccountSheet ref={bottomSheetRef} />
     </View>
   );
 };

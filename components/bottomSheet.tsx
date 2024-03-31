@@ -8,21 +8,19 @@ const AccountSheet = forwardRef<Ref>((props, ref) => {
   const { dismiss } = useBottomSheetModal();
   return (
     <BottomSheetModal ref={ref} index={0} snapPoints={snapPoints}>
-      <View>
-        <View style={{ flex: 1, alignItems: "center" }}>
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              padding: 20,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            Some data
-          </Text>
-        </View>
-        <Button title="Dismiss" onPress={() => dismiss()} />
+       <View style={{ backgroundColor: "white", padding: 16 }}>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+            color: "black",
+            textAlign: "center",
+            marginTop: 20,
+          }}
+        >
+          This feature will be available soon!🎉
+        </Text>
+        {/* <Button title="Dismiss" onPress={() => dismiss()} /> */}
       </View>
     </BottomSheetModal>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StatusBar, ScrollView } from "react-native";
+import { View, Text, StatusBar, ScrollView, Touchable, TouchableOpacity, Modal } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Ionic from "react-native-vector-icons/Ionicons";
@@ -7,6 +7,7 @@ import { useCameraPermission } from "react-native-vision-camera";
 
 import Post from "./Post";
 import Stories from "./Stories";
+import CameraComponent from "@/components/CameraComponent";
 
 //TODO: add a notification icon
 //TODO: add a bottomsheet onpress of details tab which shows details of resident
@@ -37,7 +38,9 @@ const Connect = () => {
           alignItems: "center",
         }}
       >
+        <TouchableOpacity onPress={handleCameraPress}>
         <FontAwesome name="plus-square-o" style={{ fontSize: 24 }} />
+        </TouchableOpacity>
         <Text
           style={{
             fontFamily: "Lobster-Regular",
@@ -66,6 +69,17 @@ const Connect = () => {
           />
         </View>
       </ScrollView>
+      <Modal
+        onRequestClose={() => setCameraModalVisible(false)}
+        animationType="slide"
+        transparent={false}
+        visible={isCameraModalVisible}
+      >
+        <CameraComponent
+          isActive={isCameraModalVisible}
+          setCameraModalVisible={setCameraModalVisible}
+        />
+      </Modal>
     </View>
   );
 };
