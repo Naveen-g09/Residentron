@@ -15,6 +15,7 @@ import Admin from "@/components/adminBottomSheet";
 import CalenderSheet from "@/components/calenderBS";
 import Transaction from "@/components/transactionBottomSheet";
 import Utility from "@/components/utility";
+import { Link } from "expo-router";
 
 //TODO: details grids of profile picture, name, email, phone number, address, and edit button
 //TODO: details of flat no, family members, parking, your posts, your events, your polls, your announcements, your notices, your chats, your complaints, your suggestions, your feedbacks, your maintenance, your bills, your payments, your receipts, your orders,
@@ -72,10 +73,11 @@ const Account = () => {
       <TouchableOpacity style={styles.button} onPress={handleOpenPress}>
         <Text style={styles.buttonText}>Request Help</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button} onPress={handleCalenderPress}>
-        <Text style={styles.buttonText}>Calendar</Text>
-      </TouchableOpacity>
+      <Link href={'/admin'} asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Admin</Text>
+        </TouchableOpacity>
+      </Link>
       <TouchableOpacity onPress={doLogout} style={styles.button}>
         <Text style={styles.buttonText}>LOGOUT</Text>
       </TouchableOpacity>

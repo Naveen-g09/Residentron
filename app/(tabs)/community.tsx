@@ -1,15 +1,19 @@
+import CalenderSheet from "@/components/calenderBS";
+import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import { Link } from "expo-router";
-import React from "react";
+import React, { useRef } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const Community = () => {
+  const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
+  const handleCalenderPress = () => calenderBottomSheetRef.current?.present();
+
+  const { dismiss } = useBottomSheetModal();
   return (
     <View style={styles.container}>
-      <Link href="/notice" asChild>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Posts</Text>
-        </TouchableOpacity>
-      </Link>
+      <TouchableOpacity style={styles.button} onPress={handleCalenderPress}>
+        <Text style={styles.buttonText}>Calendar</Text>
+      </TouchableOpacity>
       <Link href="/notice" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Members</Text>
@@ -30,6 +34,7 @@ const Community = () => {
           <Text style={styles.buttonText}>Announcement</Text>
         </TouchableOpacity>
       </Link>
+      <CalenderSheet ref={calenderBottomSheetRef} />
     </View>
   );
 };
@@ -43,22 +48,31 @@ const styles = StyleSheet.create({
     // backgroundColor: "powderblue",
   },
   button: {
-    backgroundColor: "white",
-    padding: 15,
-    margin: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginVertical: 10,
+    backgroundColor: "powderblue",
     borderRadius: 5,
-    shadowColor: "#000",
+    width: "80%",
+    height: "10%",
+    shadowColor: "#000", // Shadow color
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 2, // Shadow offset
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowOpacity: 0.25, // Shadow opacity
+    shadowRadius: 3.84, // Shadow radius
     elevation: 5,
+  },
+  image: {
+    marginRight: 10,
   },
   buttonText: {
     color: "#000",
     fontSize: 18,
+    marginLeft: 10,
     fontWeight: "bold",
   },
 });
