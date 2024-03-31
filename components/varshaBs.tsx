@@ -1,4 +1,4 @@
-import BottomSheet, {BottomSheetScrollView, BottomSheetModal } from "@gorhom/bottom-sheet";
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { forwardRef, useMemo } from "react";
 import { View, StyleSheet, Text, FlatList } from "react-native";
 
@@ -12,7 +12,12 @@ const VarshaBS = forwardRef<Ref, VarshaBSProps>((props, ref) => {
   const snapPoints = useMemo(() => ["50%", "75%"], []);
 
   return (
-    <BottomSheetModal ref={ref} index={1} snapPoints={snapPoints} style={styles.modal}>
+    <BottomSheetModal
+      ref={ref}
+      index={1}
+      snapPoints={snapPoints}
+      style={styles.modal}
+    >
       {props.wingData.length > 0 ? (
         <FlatList
           data={props.wingData}
@@ -27,7 +32,9 @@ const VarshaBS = forwardRef<Ref, VarshaBSProps>((props, ref) => {
           keyExtractor={(item, index) => index.toString()}
           ListHeaderComponent={() => (
             <View style={styles.headerContainer}>
-              <Text style={styles.containerHeadline}>Residents Information</Text>
+              <Text style={styles.containerHeadline}>
+                Residents Information
+              </Text>
             </View>
           )}
           ListFooterComponent={() => (
@@ -48,7 +55,7 @@ const VarshaBS = forwardRef<Ref, VarshaBSProps>((props, ref) => {
 
 const styles = StyleSheet.create({
   modal: {
-    backgroundColor: 'white', // Add background color for modal
+    backgroundColor: "white", // Add background color for modal
     borderTopLeftRadius: 20, // Add border radius
     borderTopRightRadius: 20, // Add border radius
   },
@@ -69,11 +76,11 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ccc",
   },
   headerContainer: {
-    backgroundColor: '#f0f0f0', // Add background color for header
+    backgroundColor: "#f0f0f0", // Add background color for header
     padding: 20,
   },
   footerContainer: {
-    backgroundColor: '#f0f0f0', // Add background color for footer
+    backgroundColor: "#f0f0f0", // Add background color for footer
     padding: 20,
   },
   listContent: {

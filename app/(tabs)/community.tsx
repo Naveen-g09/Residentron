@@ -1,8 +1,9 @@
-import CalenderSheet from "@/components/calenderBS";
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import { Link } from "expo-router";
 import React, { useRef } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+
+import CalenderSheet from "@/components/calenderBS";
 
 const Community = () => {
   const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
