@@ -1,4 +1,5 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
+import { Stack } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
@@ -31,6 +32,7 @@ const Varsha = () => {
 
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ headerTitle: "Varsha Apartment CHS." }} />
       <TouchableOpacity
         style={[styles.gridItem, styles.gridA]}
         onPress={() => fetchWingData("a")}

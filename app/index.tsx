@@ -28,7 +28,7 @@ export default function Page() {
         router.replace("/(tabs)/");
       } else {
         console.log("no user");
-        router.replace("/(auth)/login");
+        router.replace("../(auth)/login");
       }
     });
   }, []);
@@ -38,7 +38,7 @@ export default function Page() {
   }
 
   if (!session) {
-    return <Redirect href="/(auth)/login" />;
+    return <Redirect href="../(auth)/login" />;
   }
 
   return <Redirect href="/(tabs)/" />;

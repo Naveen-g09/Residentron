@@ -1,6 +1,8 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
+import { Stack } from "expo-router";
 import React, { useRef } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+
 import AccountSheet from "@/components/bottomSheet";
 
 const Amenities = () => {
@@ -16,7 +18,7 @@ const Amenities = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Amenities</Text>
+      <Stack.Screen options={{ headerTitle: "Ameneties" }} />
       <TouchableOpacity onPress={handlePresentModalPress} style={styles.button}>
         <Text style={styles.buttonText}>Swimming Pool</Text>
       </TouchableOpacity>
@@ -56,16 +58,28 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   button: {
-    backgroundColor: "#4CAF50",
-    paddingVertical: 15,
-    marginBottom: 15,
-    borderRadius: 10,
+    flexDirection: "row",
     alignItems: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginVertical: 10,
+    backgroundColor: "powderblue",
+    borderRadius: 5,
+    width: "100%",
+    height: "10%",
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 2, // Shadow offset
+    },
+    shadowOpacity: 0.25, // Shadow opacity
+    shadowRadius: 3.84, // Shadow radius
+    elevation: 5,
   },
   buttonText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#fff",
+    color: "black",
   },
 });
 

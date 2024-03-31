@@ -7,8 +7,6 @@ import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import { useColorScheme } from "@/components/useColorScheme";
-
 const MyTheme = {
   ...DefaultTheme,
   colors: {
@@ -55,8 +53,6 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <BottomSheetModalProvider>
@@ -68,6 +64,7 @@ function RootLayoutNav() {
               name="(settings)/index"
               options={{ headerShown: false }}
             />
+            <Stack.Screen name="ameneties" options={{}} />
             <Stack.Screen name="modal" options={{ presentation: "modal" }} />
           </Stack>
         </ThemeProvider>

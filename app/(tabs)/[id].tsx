@@ -9,6 +9,10 @@ const NewPage = () => {
     <View style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
       <Text style={styles.text}>{id} Page</Text>
+      <Text style={styles.text}>Hey!, There</Text>
+      <Text style={styles.text}>
+        Hang on, This feature is in development Process
+      </Text>
     </View>
   );
 };

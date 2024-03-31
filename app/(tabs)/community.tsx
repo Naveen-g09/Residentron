@@ -15,7 +15,7 @@ const Community = () => {
       <TouchableOpacity style={styles.button} onPress={handleCalenderPress}>
         <Text style={styles.buttonText}>Calendar</Text>
       </TouchableOpacity>
-      <Link href="/notice" asChild>
+      <Link href="/Members" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Members</Text>
         </TouchableOpacity>

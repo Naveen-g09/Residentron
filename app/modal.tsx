@@ -1,16 +1,49 @@
+import { Stack } from "expo-router";
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-//TODO: this is gonna be notification page
-//TODO: it will have notificatification of payment dues, gate updates, guest notification, help, etc
-//TODO: it will also have notification of details of the society, details of the resident, details of the flat, details of the family members, details of the parking, details of the utilities, details of the maintenance, details of the bills, details of the orders, details of the payments, details of the receipts, details of the complaints, details of the suggestions, details of the feedbacks, details of the polls, details of the announcements, details of the notices, details of the chats, details of the events, details of the posts, details of the category, details of the community, details of the account, details of the index
-
-const modal = () => {
+const Modal = () => {
   return (
-    <View>
-      <Text>Show notifications here</Text>
+    <View style={styles.container}>
+      <Stack.Screen options={{ headerTitle: "Notifications" }} />
+      <View style={styles.content}>
+        <View style={styles.notification}>
+          <Text style={styles.notificationText}>Notification 1</Text>
+        </View>
+        <View style={styles.notification}>
+          <Text style={styles.notificationText}>Notification 2</Text>
+        </View>
+        <View style={styles.notification}>
+          <Text style={styles.notificationText}>Notification 3</Text>
+        </View>
+      </View>
     </View>
   );
 };
 
-export default modal;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+  content: {
+    flex: 1,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  notification: {
+    backgroundColor: "powderblue",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  notificationText: {
+    fontSize: 16,
+    textAlign: "center",
+  },
+});
+
+export default Modal;

@@ -23,18 +23,18 @@ const index = () => {
         </TouchableOpacity>
       </Link>
 
-      <Link href="/news" asChild>
+      {/* <Link href="/news" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
         </TouchableOpacity>
-      </Link>
+      </Link> */}
 
       <Link href="/payment" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Payment Dues</Text>
         </TouchableOpacity>
       </Link>
-      <Text>Gate Updates</Text>
+      {/* <Text>Gate Updates</Text> */}
       <Link href="/news" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor: "powderblue",
   },
   button: {
     flexDirection: "row",

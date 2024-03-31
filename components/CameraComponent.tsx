@@ -6,7 +6,6 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import { Image } from "expo-image";
-import LottieView from "lottie-react-native";
 import React, { useCallback, useRef, useState } from "react";
 import {
   View,

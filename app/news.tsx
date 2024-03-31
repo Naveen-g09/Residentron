@@ -1,3 +1,4 @@
+import { Stack } from "expo-router";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
@@ -13,6 +14,7 @@ const News = () => {
 
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ headerTitle: "News" }} />
       {newsItems.map((news, index) => (
         <View key={index} style={styles.newsBlock}>
           <Text>{news}</Text>
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   newsBlock: {
-    backgroundColor: "#ddd",
+    backgroundColor: "powderblue",
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,

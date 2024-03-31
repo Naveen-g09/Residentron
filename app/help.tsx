@@ -1,3 +1,4 @@
+import { Stack } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
@@ -27,100 +28,48 @@ const Help = () => {
 
   return (
     <View style={styles.container}>
-      <View>
+      <Stack.Screen options={{ headerTitle: "Everyday Help" }} />
+      <View style={styles.section}>
         <Text style={styles.title}>Choose Services</Text>
-        <View style={styles.row}>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Maid")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Maid") && styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Maid</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Cleaning")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Cleaning") && styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Cleaning</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Cook")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Cook") && styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Cook</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.row}>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Baby Sitter")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Baby Sitter") &&
-                styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Baby Sitter</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Nanny")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Nanny") && styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Nanny</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Elderly Care")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Elderly Care") &&
-                styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Elderly Care</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleServiceSelection("Pet Care")}
-            style={[
-              styles.serviceButton,
-              selectedServices.includes("Pet Care") && styles.selectedService,
-            ]}
-          >
-            <Text style={styles.serviceButtonText}>Pet Care</Text>
-          </TouchableOpacity>
+        <View style={styles.buttonGroup}>
+          {[
+            "Maid",
+            "Cleaning",
+            "Cook",
+            "Baby Sitter",
+            "Nanny",
+            "Elderly Care",
+            "Pet Care",
+          ].map((service) => (
+            <TouchableOpacity
+              key={service}
+              onPress={() => handleServiceSelection(service)}
+              style={[
+                styles.button,
+                selectedServices.includes(service) && styles.selectedButton,
+              ]}
+            >
+              <Text style={styles.buttonText}>{service}</Text>
+            </TouchableOpacity>
+          ))}
         </View>
       </View>
 
-      <View>
+      <View style={styles.section}>
         <Text style={styles.title}>Choose Frequency</Text>
-        <View style={styles.row}>
-          <TouchableOpacity
-            onPress={() => handleFrequencySelection("Weekly")}
-            style={[
-              styles.frequencyButton,
-              selectedFrequency === "Weekly" && styles.selectedFrequency,
-            ]}
-          >
-            <Text style={styles.frequencyButtonText}>Weekly</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleFrequencySelection("Monthly")}
-            style={[
-              styles.frequencyButton,
-              selectedFrequency === "Monthly" && styles.selectedFrequency,
-            ]}
-          >
-            <Text style={styles.frequencyButtonText}>Monthly</Text>
-          </TouchableOpacity>
+        <View style={styles.buttonGroup}>
+          {["Weekly", "Monthly"].map((frequency) => (
+            <TouchableOpacity
+              key={frequency}
+              onPress={() => handleFrequencySelection(frequency)}
+              style={[
+                styles.button,
+                selectedFrequency === frequency && styles.selectedButton,
+              ]}
+            >
+              <Text style={styles.buttonText}>{frequency}</Text>
+            </TouchableOpacity>
+          ))}
         </View>
       </View>
 
@@ -135,11 +84,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    // backgroundColor: "#ffffff",
   },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  section: {
     marginBottom: 20,
   },
   title: {
@@ -147,43 +93,51 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
   },
-  serviceButton: {
+  buttonGroup: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  button: {
     backgroundColor: "#dddddd",
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
+    width: "48%",
+    alignItems: "center",
   },
-  selectedService: {
+  selectedButton: {
     backgroundColor: "#4CAF50",
   },
-  serviceButtonText: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  frequencyButton: {
-    backgroundColor: "#dddddd",
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 5,
-    width: "45%",
-  },
-  selectedFrequency: {
-    backgroundColor: "#4CAF50",
-  },
-  frequencyButtonText: {
+  buttonText: {
     fontSize: 16,
     fontWeight: "bold",
   },
   bookButton: {
-    backgroundColor: "#4CAF50",
-    padding: 15,
-    borderRadius: 5,
+    flexDirection: "row",
     alignItems: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginVertical: 10,
+    backgroundColor: "powderblue",
+    borderRadius: 5,
+    width: "100%",
+    height: "10%",
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 2, // Shadow offset
+    },
+    shadowOpacity: 0.25, // Shadow opacity
+    shadowRadius: 3.84, // Shadow radius
+    elevation: 5,
   },
   bookButtonText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#ffffff",
+    alignContent: "center",
+    textAlign: "center",
+    color: "#000",
   },
 });
 

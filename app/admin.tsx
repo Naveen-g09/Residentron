@@ -1,10 +1,11 @@
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const Admin = () => {
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ headerTitle: "Admin Page" }} />
       <Link href="/varsha" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Varsha Apt</Text>

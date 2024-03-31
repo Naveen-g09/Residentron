@@ -1,6 +1,6 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import React, { forwardRef, useMemo } from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 export type Ref = BottomSheetModal;
 
 const AccountSheet = forwardRef<Ref>((props, ref) => {
@@ -8,7 +8,7 @@ const AccountSheet = forwardRef<Ref>((props, ref) => {
   const { dismiss } = useBottomSheetModal();
   return (
     <BottomSheetModal ref={ref} index={0} snapPoints={snapPoints}>
-       <View style={{ backgroundColor: "white", padding: 16 }}>
+      <View style={{ backgroundColor: "white", padding: 16 }}>
         <Text
           style={{
             fontSize: 20,
