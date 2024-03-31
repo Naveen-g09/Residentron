@@ -1,3 +1,4 @@
+import { AntDesign } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
@@ -99,19 +100,19 @@ const Post = () => {
             }}
           >
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              {/* <TouchableOpacity onPress={() => setLike(!like)}>
+              <TouchableOpacity onPress={() => handleLike(index)}>
                 <AntDesign
-                  name={like ? "heart" : "hearto"}
+                  name={likes[index] ? "heart" : "hearto"}
                   style={{
                     paddingRight: 10,
                     fontSize: 20,
-                    color: like ? "red" : "black",
+                    color: likes[index] ? "red" : "black",
                   }}
                 />
-              </TouchableOpacity> */}
+              </TouchableOpacity>
               <TouchableOpacity>
                 <Ionic
-                  name="ios-chatbubble-outline"
+                  name="chatbubble-outline"
                   style={{ fontSize: 20, paddingRight: 10 }}
                 />
               </TouchableOpacity>

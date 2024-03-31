@@ -2053,6 +2053,13 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@koale/useworker@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@koale/useworker/-/useworker-4.0.2.tgz#cb540a2581cd6025307c3ca6685bc60748773e58"
+  integrity sha512-xPIPADtom8/3/4FLNj7MvNcBM/Z2FleH85Fdx2O869eoKW8+PoEgtSVvoxWjCWMA46Sm9A5/R1TyzNGc+yM0wg==
+  dependencies:
+    dequal "^1.0.0"
+
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
@@ -2278,10 +2285,10 @@
     prompts "^2.4.2"
     semver "^7.5.2"
 
-"@react-native-community/datetimepicker@^7.6.3":
-  version "7.6.3"
-  resolved "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-7.6.3.tgz#c6b7b84a3d6a824b55d2710658d86fe64ce12a72"
-  integrity sha512-Ceb+zWwX67tJKK8gTk6JRRIlU1DqIuwe2kaFwz28s6SKrU8bn/nSSB8/y9B4vic3hb8Z0WTo22807GA1Kg4W7A==
+"@react-native-community/datetimepicker@7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-7.6.1.tgz#98bdee01e3df490526ee1125e438c2030becac1f"
+  integrity sha512-g66Q2Kd9Uw3eRL7kkrTsGhi+eXxNoPDRFYH6z78sZQuYjPkUQgJDDMUYgBmaBsQx/fKMtemPrCj1ulGmyi0OSw==
   dependencies:
     invariant "^2.2.4"
 
@@ -2309,10 +2316,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.3.0.tgz#9e558170c106bbafaa1ef502bd8e6d4651012bf9"
   integrity sha512-+zDZ20NUnSWghj7Ku5aFphMzuM9JulqCW+aPXT6IfIXFbb8tzYTTOSeRFOtuekJ99ibW2fUCSsjuKNlwDIbHFg==
 
-"@react-native-picker/picker@^2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-2.7.2.tgz#c91c6b936d5b9872190f56836bdba227eb521571"
-  integrity sha512-a+UiyCu0XtXJK+VGIFggwA02PU3dgnvUPxlk2u99ZphTFp80Va8WH1OM9g2gyUXTVg9a5iybpDBa2+7fDfIMXA==
+"@react-native-picker/picker@2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-2.6.1.tgz#3b20ddd1385fab0487db103dc6519570f8892e6d"
+  integrity sha512-oJftvmLOj6Y6/bF4kPcK6L83yNBALGmqNYugf94BzP0FQGpHBwimVN2ygqkQ2Sn2ZU3pGUZMs0jV6+Gku2GyYg==
 
 "@react-native/assets-registry@0.73.1", "@react-native/assets-registry@~0.73.1":
   version "0.73.1"
@@ -5394,6 +5401,11 @@ deprecated-react-native-prop-types@^5.0.0:
     invariant "^2.2.4"
     prop-types "^15.8.1"
 
+dequal@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dequal/-/dequal-1.0.1.tgz#dbbf9795ec626e9da8bd68782f4add1d23700d8b"
+  integrity sha512-Fx8jxibzkJX2aJgyfSdLhr9tlRoTnHKrRJuu2XHlAgKioN2j19/Bcbe0d4mFXYZ3+wpE2KVobUVTfDutcD17xQ==
+
 destroy@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
@@ -6185,6 +6197,14 @@ expo-asset@~9.0.2:
     expo-file-system "~16.0.0"
     invariant "^2.2.4"
     md5-file "^3.2.3"
+
+expo-camera@13.2.0:
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/expo-camera/-/expo-camera-13.2.0.tgz#a2521c6c5398fbe658ca6d0bd186a2b0529c9a1b"
+  integrity sha512-AwmIhs0h5n6sMBxZQq76yiBiiK731vwUtNdOCza6/dEVxNumnMu62oGaB8KFGfMNh6YrR/aHJSWkV8OInmaLpQ==
+  dependencies:
+    "@koale/useworker" "^4.0.2"
+    invariant "^2.2.4"
 
 expo-constants@~15.4.0, expo-constants@~15.4.3:
   version "15.4.5"
@@ -10931,6 +10951,11 @@ react-native-video@^5.1.1:
     keymirror "^0.1.1"
     prop-types "^15.7.2"
     shaka-player "^2.5.9"
+
+react-native-vision-camera@^3.9.2:
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/react-native-vision-camera/-/react-native-vision-camera-3.9.2.tgz#d6656a4c0af929916d5e6b57af5adfe94ff8c65a"
+  integrity sha512-watHRWbeH7CBYq/5sPj2fpZj87V8J5nGdmYO61aYsDLuJ2Pkij7anAzBf8B8oZiyoSUuYpAzX4lIIi+LjWVedA==
 
 react-native-web@~0.19.6:
   version "0.19.10"

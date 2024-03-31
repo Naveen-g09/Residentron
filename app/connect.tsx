@@ -1,4 +1,5 @@
 import React from "react";
+import { Camera, CameraType } from 'expo-camera';
 import { View, Text, StatusBar, ScrollView } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -12,6 +13,8 @@ import Stories from "./Stories";
 //TODO: add grids for posts, members, and events, chats, notices, posts, announcements, and polls
 
 const Connect = () => {
+
+  
   return (
     <View style={{ height: "100%" }}>
       <StatusBar backgroundColor="white" barStyle="dark-content" animated />
@@ -31,7 +34,7 @@ const Connect = () => {
             fontWeight: "500",
           }}
         >
-          Instagram
+          Residentron
         </Text>
         <Feather name="navigation" style={{ fontSize: 24 }} />
       </View>
@@ -47,7 +50,7 @@ const Connect = () => {
           }}
         >
           <Ionic
-            name="ios-reload-circle-sharp"
+            name="refresh-outline"
             style={{ fontSize: 60, opacity: 0.2 }}
           />
         </View>
