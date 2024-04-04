@@ -1,5 +1,4 @@
 import { MMKV } from "react-native-mmkv";
-
 export const storage = new MMKV();
 
 const CHAT_PREFIX = "chat:";
