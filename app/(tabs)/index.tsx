@@ -1,6 +1,8 @@
 import { Link } from "expo-router";
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
+
+import { storage } from "@/utils/mmkvHelpers";
 
 //TODO: this is homepage of the app
 //TODO: add a notification icon
@@ -8,7 +10,15 @@ import { Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 //TODO: options of payment dues, gate updates, guest notification, help, etc
 //TODO: in notification component it will push notifications of payment dues, gate updates, guest notification, help, etc
 
-const index = () => {
+export const Index = () => {
+  useEffect(() => {
+    // storage.clearAll();
+    const keys = storage.getAllKeys();
+    //fetch keys as per chatcard id
+    if (!keys.length) {
+    }
+  });
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Link href="/visitor" asChild>
@@ -86,5 +96,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
-export default index;
