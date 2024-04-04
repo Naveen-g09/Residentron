@@ -13,6 +13,7 @@ const NewPage = () => {
       <Text style={styles.text}>
         Hang on, This feature is in development Process
       </Text>
+      <Text className=""></Text>
     </View>
   );
 };
