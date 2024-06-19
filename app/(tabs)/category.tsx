@@ -5,6 +5,7 @@ import { Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 //TODO: add a notification icon
 //TODO: add 4 rectangle grid buttons which has options of everyday help, appliance repair, home cleaning, and moving
 //TODO: add a search bar
+//test
 
 const category = () => {
   return (
