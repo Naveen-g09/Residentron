@@ -1,8 +1,6 @@
 import { Link } from "expo-router";
-import React, { useEffect } from "react";
-import { Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
-
-import { storage } from "@/utils/mmkvHelpers";
+import React from "react";
+import { Text, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
 
 //TODO: this is homepage of the app
 //TODO: add a notification icon
@@ -10,15 +8,7 @@ import { storage } from "@/utils/mmkvHelpers";
 //TODO: options of payment dues, gate updates, guest notification, help, etc
 //TODO: in notification component it will push notifications of payment dues, gate updates, guest notification, help, etc
 
-export const Index = () => {
-  useEffect(() => {
-    // storage.clearAll();
-    const keys = storage.getAllKeys();
-    //fetch keys as per chatcard id
-    if (!keys.length) {
-    }
-  });
-
+const Home = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Link href="/visitor" asChild>
@@ -33,18 +23,18 @@ export const Index = () => {
         </TouchableOpacity>
       </Link>
 
-      {/* <Link href="/news" asChild>
+      <Link href="/news" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
         </TouchableOpacity>
-      </Link> */}
+      </Link>
 
       <Link href="/payment" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Payment Dues</Text>
         </TouchableOpacity>
       </Link>
-      {/* <Text>Gate Updates</Text> */}
+
       <Link href="/news" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>News</Text>
@@ -96,3 +86,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
+export default Home;

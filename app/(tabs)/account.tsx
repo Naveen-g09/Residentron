@@ -1,17 +1,10 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import { Link } from "expo-router";
-import React, { useEffect, useState, useRef } from "react";
-import {
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  Alert,
-  ScrollView,
-} from "react-native";
+import React, { useState, useRef } from "react";
+import { Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 
 import AccountSheet from "../../components/bottomSheet";
 
-import { supabase } from "@/app/lib/supabase-client";
 import Admin from "@/components/adminBottomSheet";
 import CalenderSheet from "@/components/calenderBS";
 import Transaction from "@/components/transactionBottomSheet";
@@ -38,24 +31,8 @@ const Account = () => {
   const handleUtilityPress = () => utilityBottomSheetRef.current?.present();
 
   const [user, setUser] = useState(null);
-  useEffect(() => {
-    supabase.auth
-      .getUser()
-      .then(({ data: { user } }: { data: { user: any } }) => {
-        if (user) {
-          setUser(user);
-        } else {
-          Alert.alert("Error Accessing User");
-        }
-      });
-  }, []);
 
-  const doLogout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-      Alert.alert("Error Signing Out User", error.message);
-    }
-  };
+  const doLogout = async () => {};
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
