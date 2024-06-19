@@ -13,7 +13,8 @@
     "type-check": "tsc --pretty --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "pre-commit": "yarn type-check && yarn format && yarn lint:fix && yarn lint && yarn format-check"
+    "pre-commit": "yarn type-check && yarn format && yarn lint:fix && yarn lint && yarn format-check",
+    "prepare": "husky"
   },
   "jest": {
     "preset": "jest-expo"
