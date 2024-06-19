@@ -11,45 +11,45 @@ import { StyleSheet } from 'react-native'
 
 const Home = () => {
     return (
-        <View>
-            <ScrollView contentContainerStyle={styles.container}>
-                <Link href="/visitor" asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Visitors Update</Text>
-                    </TouchableOpacity>
-                </Link>
 
-                <Link href="/event" asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Events</Text>
-                    </TouchableOpacity>
-                </Link>
+        <ScrollView contentContainerStyle={styles.container}>
+            <Link href="/visitor" asChild>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Visitors Update</Text>
+                </TouchableOpacity>
+            </Link>
 
-                <Link href="/news" asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>News</Text>
-                    </TouchableOpacity>
-                </Link>
+            <Link href="/event" asChild>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Events</Text>
+                </TouchableOpacity>
+            </Link>
 
-                <Link href="/payment" asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Payment Dues</Text>
-                    </TouchableOpacity>
-                </Link>
-                
-                <Link href="/news" asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>News</Text>
-                    </TouchableOpacity>
-                </Link>
+            <Link href="/news" asChild>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>News</Text>
+                </TouchableOpacity>
+            </Link>
 
-                <Link href="/visitor" asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Visitors</Text>
-                    </TouchableOpacity>
-                </Link>
-            </ScrollView>
-        </View>
+            <Link href="/payment" asChild>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Payment Dues</Text>
+                </TouchableOpacity>
+            </Link>
+
+            <Link href="/news" asChild>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>News</Text>
+                </TouchableOpacity>
+            </Link>
+
+            <Link href="/visitor" asChild>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Visitors</Text>
+                </TouchableOpacity>
+            </Link>
+        </ScrollView>
+
     )
 }
 
