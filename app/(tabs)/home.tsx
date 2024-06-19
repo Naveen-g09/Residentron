@@ -1,7 +1,6 @@
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router'
-import { StyleSheet } from 'react-native'
+import { Link } from "expo-router";
+import React from "react";
+import { Text, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
 
 //TODO: this is homepage of the app
 //TODO: add a notification icon
@@ -10,86 +9,82 @@ import { StyleSheet } from 'react-native'
 //TODO: in notification component it will push notifications of payment dues, gate updates, guest notification, help, etc
 
 const Home = () => {
-    return (
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <Link href="/visitor" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Visitors Update</Text>
+        </TouchableOpacity>
+      </Link>
 
-        <ScrollView contentContainerStyle={styles.container}>
-            <Link href="/visitor" asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Visitors Update</Text>
-                </TouchableOpacity>
-            </Link>
+      <Link href="/event" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Events</Text>
+        </TouchableOpacity>
+      </Link>
 
-            <Link href="/event" asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Events</Text>
-                </TouchableOpacity>
-            </Link>
+      <Link href="/news" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>News</Text>
+        </TouchableOpacity>
+      </Link>
 
-            <Link href="/news" asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>News</Text>
-                </TouchableOpacity>
-            </Link>
+      <Link href="/payment" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Payment Dues</Text>
+        </TouchableOpacity>
+      </Link>
 
-            <Link href="/payment" asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Payment Dues</Text>
-                </TouchableOpacity>
-            </Link>
+      <Link href="/news" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>News</Text>
+        </TouchableOpacity>
+      </Link>
 
-            <Link href="/news" asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>News</Text>
-                </TouchableOpacity>
-            </Link>
-
-            <Link href="/visitor" asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Visitors</Text>
-                </TouchableOpacity>
-            </Link>
-        </ScrollView>
-
-    )
-}
-
+      <Link href="/visitor" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Visitors</Text>
+        </TouchableOpacity>
+      </Link>
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginVertical: 10,
+    backgroundColor: "powderblue",
+    borderRadius: 5,
+    width: "80%",
+    height: "10%",
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 2, // Shadow offset
     },
-    button: {
-        flexDirection: "row",
-        alignItems: "center",
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        marginVertical: 10,
-        backgroundColor: "powderblue",
-        borderRadius: 5,
-        width: "80%",
-        height: "10%",
-        shadowColor: "#000", // Shadow color
-        shadowOffset: {
-            width: 0,
-            height: 2, // Shadow offset
-        },
-        shadowOpacity: 0.25, // Shadow opacity
-        shadowRadius: 3.84, // Shadow radius
-        elevation: 5,
-    },
-    image: {
-        marginRight: 10,
-    },
-    buttonText: {
-        color: "#000",
-        fontSize: 18,
-        marginLeft: 10,
-        fontWeight: "bold",
-    },
+    shadowOpacity: 0.25, // Shadow opacity
+    shadowRadius: 3.84, // Shadow radius
+    elevation: 5,
+  },
+  image: {
+    marginRight: 10,
+  },
+  buttonText: {
+    color: "#000",
+    fontSize: 18,
+    marginLeft: 10,
+    fontWeight: "bold",
+  },
 });
 
-
-export default Home
+export default Home;

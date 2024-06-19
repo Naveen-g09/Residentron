@@ -1,5 +1,5 @@
 import { Redirect } from "expo-router";
-import React, { useState } from "react";
+import React from "react";
 
 import { IS_ONBOARDED_KEY } from "@/utils/costants/chat";
 import { storage } from "@/utils/mmkvHelpers";
