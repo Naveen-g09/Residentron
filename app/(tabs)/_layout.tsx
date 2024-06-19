@@ -17,9 +17,9 @@ function TabBarIcon(props: {
 
 export default function RootLayout() {
   return (
-    <Tabs>
+    <Tabs initialRouteName="home">
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: "Home",
           tabBarIcon: (props) => <TabBarIcon {...props} name="home" />,
@@ -64,7 +64,6 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
-      <Tabs.Screen name="[id]" options={{ headerShown: false, href: null }} />
     </Tabs>
   );
 }

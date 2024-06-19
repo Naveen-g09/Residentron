@@ -59,12 +59,7 @@ function RootLayoutNav() {
         <ThemeProvider value={MyTheme}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-            <Stack.Screen
-              name="(settings)/index"
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen name="ameneties" options={{}} />
+            <Stack.Screen name="ameneties" />
             <Stack.Screen name="modal" options={{ presentation: "modal" }} />
           </Stack>
         </ThemeProvider>
