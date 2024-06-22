@@ -1,7 +1,8 @@
 import { BottomSheetModal, useBottomSheetModal } from "@gorhom/bottom-sheet";
 import { Link } from "expo-router";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { useSetRecoilState } from "recoil";
 
 import AccountSheet from "../../components/bottomSheet";
 
@@ -9,7 +10,6 @@ import Admin from "@/components/adminBottomSheet";
 import CalenderSheet from "@/components/calenderBS";
 import Transaction from "@/components/transactionBottomSheet";
 import Utility from "@/components/utility";
-import { useSetRecoilState } from "recoil";
 import { userAtom } from "@/store";
 
 //TODO: details grids of profile picture, name, email, phone number, address, and edit button
@@ -33,7 +33,9 @@ const Account = () => {
   const handleAdminPress = () => adminBottomSheetRef.current?.present();
   const handleUtilityPress = () => utilityBottomSheetRef.current?.present();
 
-  const doLogout = async () => {setUser(false)};
+  const doLogout = async () => {
+    setUser(false);
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
