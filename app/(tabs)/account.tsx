@@ -9,6 +9,8 @@ import Admin from "@/components/adminBottomSheet";
 import CalenderSheet from "@/components/calenderBS";
 import Transaction from "@/components/transactionBottomSheet";
 import Utility from "@/components/utility";
+import { useSetRecoilState } from "recoil";
+import { userAtom } from "@/store";
 
 //TODO: details grids of profile picture, name, email, phone number, address, and edit button
 //TODO: details of flat no, family members, parking, your posts, your events, your polls, your announcements, your notices, your chats, your complaints, your suggestions, your feedbacks, your maintenance, your bills, your payments, your receipts, your orders,
@@ -16,6 +18,7 @@ import Utility from "@/components/utility";
 //TODO: add a logout button
 
 const Account = () => {
+  const setUser = useSetRecoilState(userAtom);
   const bottomSheetRef = useRef<BottomSheetModal>(null);
   const calenderBottomSheetRef = useRef<BottomSheetModal>(null);
   const transactionBottomSheetRef = useRef<BottomSheetModal>(null);
@@ -30,9 +33,7 @@ const Account = () => {
   const handleAdminPress = () => adminBottomSheetRef.current?.present();
   const handleUtilityPress = () => utilityBottomSheetRef.current?.present();
 
-  const [user, setUser] = useState(null);
-
-  const doLogout = async () => {};
+  const doLogout = async () => {setUser(false)};
 
   return (
     <ScrollView contentContainerStyle={styles.container}>

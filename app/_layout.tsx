@@ -6,6 +6,8 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { RecoilRoot } from "recoil";
+import { Slot } from "expo-router";
 
 const MyTheme = {
   ...DefaultTheme,
@@ -54,16 +56,19 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
+    <RecoilRoot>
     <GestureHandlerRootView style={{ flex: 1 }}>
       <BottomSheetModalProvider>
         <ThemeProvider value={MyTheme}>
-          <Stack>
+          {/* <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="ameneties" />
             <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-          </Stack>
+          </Stack> */}
+          <Slot />
         </ThemeProvider>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>
+    </RecoilRoot>
   );
 }
