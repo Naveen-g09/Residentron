@@ -1,7 +1,10 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Link, Tabs } from "expo-router";
+import { Link, Tabs, Redirect } from "expo-router";
 import React from "react";
 import { Pressable } from "react-native";
+import { useRecoilValueLoadable } from "recoil";
+
+import { userAtom } from "@/store";
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -15,7 +18,12 @@ function TabBarIcon(props: {
 
 //TODO: add a missing page to handle 404 errors
 
-export default function RootLayout() {
+export default function ProtectedLayout() {
+  const { contents: user, state } = useRecoilValueLoadable(userAtom);
+
+  if (!user) {
+    return <Redirect href="/sign-in" />;
+  }
   return (
     <Tabs initialRouteName="home">
       <Tabs.Screen
