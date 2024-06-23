@@ -2,6 +2,8 @@ import { Link } from "expo-router";
 import React from "react";
 import { Text, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
 
+import { onDisplayNotification } from "@/utils/helpers/notification";
+
 //TODO: this is homepage of the app
 //TODO: add a notification icon
 //TODO: it will have details of the society, details of the resident, details of the flat, details of the family members, details of the parking, details of the utilities, details of the maintenance, details of the bills, details of the orders, details of the payments, details of the receipts, details of the complaints, details of the suggestions, details of the feedbacks, details of the polls, details of the announcements, details of the notices, details of the chats, details of the events, details of the posts, details of the category, details of the community, details of the account, details of the index
@@ -41,11 +43,18 @@ const Home = () => {
         </TouchableOpacity>
       </Link>
 
-      <Link href="/visitor" asChild>
+      {/* <Link href="/visitor" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Visitors</Text>
         </TouchableOpacity>
-      </Link>
+      </Link> */}
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => onDisplayNotification()}
+      >
+        <Text style={styles.buttonText}>Display Notification</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };
