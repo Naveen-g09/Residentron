@@ -4,7 +4,9 @@
   },
   "build": {
     "development": {
-      "ios": { "image": "latest" },
+      "ios": {
+        "image": "latest"
+      },
       "developmentClient": true,
       "distribution": "internal",
       "channel": "preview",
