@@ -4,3 +4,5 @@
 npx expo-doctor
 
 yarn pre-commit
+
+git add .
