@@ -1,19 +1,36 @@
 {
   "cli": {
-    "version": ">= 7.0.0"
+    "version": ">= 5.9.3"
   },
   "build": {
     "development": {
+      "ios": {
+        "image": "latest"
+      },
       "developmentClient": true,
       "distribution": "internal",
-      "channel": "development"
+      "channel": "preview",
+      "credentialsSource": "remote"
+    },
+    "preview-apk": {
+      "android": {
+        "buildType": "apk",
+        "resourceClass": "large",
+        "credentialsSource": "remote",
+        "image": "auto"
+      },
+      "channel": "preview-apk"
     },
     "preview": {
       "distribution": "internal",
-      "channel": "preview"
+      "channel": "preview",
+      "ios": {
+        "simulator": false
+      }
     },
     "production": {
-      "channel": "production"
+      "channel": "production",
+      "credentialsSource": "remote"
     }
   },
   "submit": {
