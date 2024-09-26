@@ -39,7 +39,8 @@
           "enableMicrophonePermission": true,
           "microphonePermissionText": "Residentron needs access to your Microphone."
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
