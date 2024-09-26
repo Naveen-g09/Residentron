@@ -29,19 +29,7 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      [
-        "react-native-vision-camera",
-        {
-          "enableCodeScanner": true,
-          "cameraPermissionText": "Residentron needs access to your Camera.",
-          "enableMicrophonePermission": true,
-          "microphonePermissionText": "Residentron needs access to your Microphone."
-        }
-      ],
-      "expo-font"
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
     },
