@@ -10,21 +10,21 @@ export interface PageInterface extends Pick<ImageProps, "source"> {
 
 export const PAGES: PageInterface[] = [
   {
-    title: "Wellness Guide",
+    title: "On time Medical Help",
     description:
-      "Discover personalized health advice and lifestyle tips for optimal wellness",
+      "With Residentron Always be connected to the society, community and their services.",
     source: require("../assets/images/clinic-1.jpg"),
   },
   {
-    title: "Medication Manager",
+    title: "Home Manager",
     description:
-      "Effortlessly organize and track your medications and dosage guidance.",
+      "Effortlessly organize and track your Society Documents, bills, issues and services. Never miss a thing.",
     source: require("../assets/images/clinic-2.png"),
   },
   {
-    title: "Health Tracker",
+    title: "Expense Tracker & Saver",
     description:
-      "Monitor your vitals, symptoms, and progress on your journey to better health",
+      "Monitor your Bills, timing, events, plans, guests & what not and progress on your journey to better living.",
     source: require("../assets/images/clinic-3.png"),
   },
 ];

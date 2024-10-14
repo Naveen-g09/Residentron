@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Visitor = () => {
+const Announcement = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.message}>No Visitors</Text>
-      <Text style={styles.subMessage}>You have no visitors at the moment.</Text>
+      <Text style={styles.message}>No Announcements yet</Text>
+      <Text style={styles.subMessage}>You have no notices at the moment.</Text>
     </View>
   );
 };
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Visitor;
+export default Announcement;

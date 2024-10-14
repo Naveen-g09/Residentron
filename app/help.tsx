@@ -21,7 +21,6 @@ const Help = () => {
   };
 
   const handleBooking = () => {
-    // Here you can handle the booking logic based on selected services and frequency
     console.log("Selected Services:", selectedServices);
     console.log("Selected Frequency:", selectedFrequency);
   };
@@ -84,14 +83,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#f8f8f8", // Light background color for contrast
   },
   section: {
-    marginBottom: 20,
+    marginBottom: 30,
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 10,
+    color: "#333", // Darker color for the title
+    marginBottom: 15,
   },
   buttonGroup: {
     flexDirection: "row",
@@ -99,45 +100,47 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   button: {
-    backgroundColor: "#dddddd",
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 5,
+    backgroundColor: "#e0e0e0",
+    padding: 15,
+    marginBottom: 15,
+    borderRadius: 10,
     width: "48%",
     alignItems: "center",
-  },
-  selectedButton: {
-    backgroundColor: "#4CAF50",
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  bookButton: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    marginVertical: 10,
-    backgroundColor: "powderblue",
-    borderRadius: 5,
-    width: "100%",
-    height: "10%",
     shadowColor: "#000", // Shadow color
     shadowOffset: {
       width: 0,
       height: 2, // Shadow offset
     },
-    shadowOpacity: 0.25, // Shadow opacity
-    shadowRadius: 3.84, // Shadow radius
-    elevation: 5,
+    shadowOpacity: 0.3, // Shadow opacity
+    shadowRadius: 3.5, // Shadow radius
+    elevation: 5, // Elevation for Android
+  },
+  selectedButton: {
+    backgroundColor: "#4CAF50", // Green for selected
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#000", // Text color for button
+  },
+  bookButton: {
+    paddingVertical: 15,
+    backgroundColor: "#2196F3", // Blue color for the booking button
+    borderRadius: 10,
+    alignItems: "center",
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 4, // Shadow offset
+    },
+    shadowOpacity: 0.3, // Shadow opacity
+    shadowRadius: 4, // Shadow radius
+    elevation: 6, // Elevation for Android
   },
   bookButtonText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
-    alignContent: "center",
-    textAlign: "center",
-    color: "#000",
+    color: "#ffffff", // White text color for button
   },
 });
 

@@ -20,7 +20,7 @@ const Community = () => {
           <Text style={styles.buttonText}>Members</Text>
         </TouchableOpacity>
       </Link>
-      <Link href="/notice" asChild>
+      <Link href="/Notices" asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Notices</Text>
         </TouchableOpacity>
