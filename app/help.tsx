@@ -1,28 +1,24 @@
 import { Stack } from "expo-router";
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import RNImmediatePhoneCall from "react-native-immediate-phone-call";
 
 const Help = () => {
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
-  const [selectedFrequency, setSelectedFrequency] = useState<string | null>(
-    null,
-  );
+  const servicesWithNumbers: { [key: string]: string } = {
+    Maid: "9819618472",
+    Cleaning: "7208208480",
+    Cook: "8806795560",
+    "Baby Sitter": "9123456782",
+    Nanny: "9819618472",
+    "Elderly Care": "+91 72082 08480",
+    "Pet Care": "8806795560",
+  };
 
-  const handleServiceSelection = (service: string) => {
-    if (selectedServices.includes(service)) {
-      setSelectedServices(selectedServices.filter((item) => item !== service));
-    } else {
-      setSelectedServices([...selectedServices, service]);
+  const handleServiceCall = (service: string) => {
+    const phoneNumber = servicesWithNumbers[service];
+    if (phoneNumber) {
+      RNImmediatePhoneCall.immediatePhoneCall(phoneNumber); // Make the call
     }
-  };
-
-  const handleFrequencySelection = (frequency: string) => {
-    setSelectedFrequency(frequency);
-  };
-
-  const handleBooking = () => {
-    console.log("Selected Services:", selectedServices);
-    console.log("Selected Frequency:", selectedFrequency);
   };
 
   return (
@@ -31,50 +27,17 @@ const Help = () => {
       <View style={styles.section}>
         <Text style={styles.title}>Choose Services</Text>
         <View style={styles.buttonGroup}>
-          {[
-            "Maid",
-            "Cleaning",
-            "Cook",
-            "Baby Sitter",
-            "Nanny",
-            "Elderly Care",
-            "Pet Care",
-          ].map((service) => (
+          {Object.keys(servicesWithNumbers).map((service) => (
             <TouchableOpacity
               key={service}
-              onPress={() => handleServiceSelection(service)}
-              style={[
-                styles.button,
-                selectedServices.includes(service) && styles.selectedButton,
-              ]}
+              onPress={() => handleServiceCall(service)}
+              style={styles.button}
             >
               <Text style={styles.buttonText}>{service}</Text>
             </TouchableOpacity>
           ))}
         </View>
       </View>
-
-      <View style={styles.section}>
-        <Text style={styles.title}>Choose Frequency</Text>
-        <View style={styles.buttonGroup}>
-          {["Weekly", "Monthly"].map((frequency) => (
-            <TouchableOpacity
-              key={frequency}
-              onPress={() => handleFrequencySelection(frequency)}
-              style={[
-                styles.button,
-                selectedFrequency === frequency && styles.selectedButton,
-              ]}
-            >
-              <Text style={styles.buttonText}>{frequency}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      </View>
-
-      <TouchableOpacity onPress={handleBooking} style={styles.bookButton}>
-        <Text style={styles.bookButtonText}>Book</Text>
-      </TouchableOpacity>
     </View>
   );
 };

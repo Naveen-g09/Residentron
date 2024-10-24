@@ -23,6 +23,7 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": ["android.permission.CALL_PHONE"],
       "package": "com.cheetahworks.residentron"
     },
     "web": {
