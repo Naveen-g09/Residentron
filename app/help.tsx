@@ -5,13 +5,13 @@ import RNImmediatePhoneCall from "react-native-immediate-phone-call";
 
 const Help = () => {
   const servicesWithNumbers: { [key: string]: string } = {
-    Maid: "9876543210",
-    Cleaning: "9123456780",
-    Cook: "9123456781",
+    Maid: "9819618472",
+    Cleaning: "7208208480",
+    Cook: "8806795560",
     "Baby Sitter": "9123456782",
-    Nanny: "9123456783",
-    "Elderly Care": "9123456784",
-    "Pet Care": "9123456785",
+    Nanny: "9819618472",
+    "Elderly Care": "+91 72082 08480",
+    "Pet Care": "8806795560",
   };
 
   const handleServiceCall = (service: string) => {
@@ -78,10 +78,32 @@ const styles = StyleSheet.create({
     shadowRadius: 3.5, // Shadow radius
     elevation: 5, // Elevation for Android
   },
+  selectedButton: {
+    backgroundColor: "#4CAF50", // Green for selected
+  },
   buttonText: {
     fontSize: 18,
     fontWeight: "600",
     color: "#000", // Text color for button
+  },
+  bookButton: {
+    paddingVertical: 15,
+    backgroundColor: "#2196F3", // Blue color for the booking button
+    borderRadius: 10,
+    alignItems: "center",
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 4, // Shadow offset
+    },
+    shadowOpacity: 0.3, // Shadow opacity
+    shadowRadius: 4, // Shadow radius
+    elevation: 6, // Elevation for Android
+  },
+  bookButtonText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#ffffff", // White text color for button
   },
 });
 
