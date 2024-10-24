@@ -2924,6 +2924,13 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.7.tgz#50ae4353eaaddc04044279812f52c8c65857dbcb"
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
 
+"@types/react-native-razorpay@^2.2.6":
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/@types/react-native-razorpay/-/react-native-razorpay-2.2.6.tgz#811f2755c75597f516ee472fd6f6c2eda6dd5c53"
+  integrity sha512-8CqZvL53bqs51aLaNXssEaBFN5a09WB5nWEOa1RtNXTnuh9zDyMZ9yKqjN+buVFFOAH4mE9IpB7J1V1I3REnMQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native-vector-icons@^6.4.18", "@types/react-native-vector-icons@^6.4.6":
   version "6.4.18"
   resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.18.tgz#18671c617b9d0958747bc959903470dde91a8c79"
@@ -6068,7 +6075,7 @@ expect@^29.7.0:
     jest-message-util "^29.7.0"
     jest-util "^29.7.0"
 
-expo-asset@~10.0.10:
+expo-asset@^10.0.10, expo-asset@~10.0.10:
   version "10.0.10"
   resolved "https://registry.yarnpkg.com/expo-asset/-/expo-asset-10.0.10.tgz#9e6e02c1a6ec3d19b50d5e615e4dd8e5cc30e857"
   integrity sha512-0qoTIihB79k+wGus9wy0JMKq7DdenziVx3iUkGvMAy2azscSgWH6bd2gJ9CGnhC6JRd3qTMFBL0ou/fx7WZl7A==
@@ -6181,10 +6188,10 @@ expo-modules-autolinking@1.11.3:
     require-from-string "^2.0.2"
     resolve-from "^5.0.0"
 
-expo-modules-core@1.12.25:
-  version "1.12.25"
-  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-1.12.25.tgz#9ec8d8762da92d961ab1044817da033ae617c9f4"
-  integrity sha512-HB2LS2LEM41Xq1bG+Jtzqm6XgPaa+mM9BAvCdX1lDGMQ9Ay9vMTL/GVEs2gpsINPofICopjBRwD+wftyCbVrzg==
+expo-modules-core@1.12.26:
+  version "1.12.26"
+  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-1.12.26.tgz#86c4087dc6246abfc4d7f5e61097dc8cc4b22262"
+  integrity sha512-y8yDWjOi+rQRdO+HY+LnUlz8qzHerUaw/LUjKPU/mX8PRXP4UUPEEp5fjAwBU44xjNmYSHWZDwet4IBBE+yQUA==
   dependencies:
     invariant "^2.2.4"
 
@@ -6268,10 +6275,10 @@ expo-web-browser@~13.0.3:
   resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-13.0.3.tgz#dceb05dbc187b498ca937b02adf385b0232a4e92"
   integrity sha512-HXb7y82ApVJtqk8tManyudtTrCtx8xcUnVzmJECeHCB0SsWSQ+penVLZxJkcyATWoJOsFMnfVSVdrTcpKKGszQ==
 
-expo@~51.0.37:
-  version "51.0.37"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-51.0.37.tgz#a19b05b722d7ad445757b82a63185295508d2d4d"
-  integrity sha512-zMdfTiGNgNWG0HOOFA3zRreS94iQ7fDxxgEIR6wdQCbncTpbeYj+5mscTAlHE9JJ+oBkcNyJXrLSjE/YVbFERg==
+expo@~51.0.38:
+  version "51.0.38"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-51.0.38.tgz#e4127b230454a34a507cfb9f1a2e4b3855cb0579"
+  integrity sha512-/B9npFkOPmv6WMIhdjQXEY0Z9k/67UZIVkodW8JxGIXwKUZAGHL+z1R5hTtWimpIrvVhyHUFU3f8uhfEKYhHNQ==
   dependencies:
     "@babel/runtime" "^7.20.0"
     "@expo/cli" "0.18.30"
@@ -6285,7 +6292,7 @@ expo@~51.0.37:
     expo-font "~12.0.10"
     expo-keep-awake "~13.0.2"
     expo-modules-autolinking "1.11.3"
-    expo-modules-core "1.12.25"
+    expo-modules-core "1.12.26"
     fbemitter "^3.0.0"
     whatwg-url-without-unicode "8.0.0-3"
 
@@ -10754,6 +10761,11 @@ react-native-ratings@8.0.4:
   integrity sha512-Xczu5lskIIRD6BEdz9A0jDRpEck/SFxRqiglkXi0u67yAtI1/pcJC76P4MukCbT8K4BPVl+42w83YqXBoBRl7A==
   dependencies:
     lodash "^4.17.15"
+
+react-native-razorpay@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-razorpay/-/react-native-razorpay-2.3.0.tgz#e89f3c635e439bc85e4c7972eb2d67e2c0e0abc3"
+  integrity sha512-xxiZCPuZmiRq5UHDr+D4OoyxEjMu0ujC+RaE+rYo938EK0Vc21dZRUVxMVP1L2WgzA8PYwmD5FWvdHNtWLQC4Q==
 
 react-native-reanimated@~3.10.1:
   version "3.10.1"
