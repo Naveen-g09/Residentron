@@ -30,7 +30,7 @@
     "@types/react-native-razorpay": "^2.2.6",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
-    "expo": "~51.0.37",
+    "expo": "~51.0.38",
     "expo-asset": "^10.0.10",
     "expo-dev-client": "~4.0.28",
     "expo-font": "~12.0.10",
